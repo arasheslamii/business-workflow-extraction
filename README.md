@@ -17,7 +17,7 @@ code in this repository.
 
 ---
 ### A compelete description of the dataset
-You can find a compelete description of dataset in DATA_DESCRIPTION.md
+You can find a compelete description of dataset in  [`DATA_DESCRIPTION.md`](DATA_DESCRIPTION.md) 
 
 ## The task
 
