@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the sequence-length budget with the REAL tokenizer. Login node (CPU).
+"""Verify the sequence-length budget with the REAL tokenizer. CPU only.
 
 scripts/02_verify_data.py can only estimate token counts from character length.
 This confirms them, because getting max_seq_len_train wrong silently truncates
@@ -17,6 +17,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
+# Applied before torch/transformers import so HF_HOME and the cuBLAS
+# determinism flag take effect. Makes the scripts runnable standalone.
+from nextverse.env import apply_defaults, local_files_only  # noqa: E402
+
+apply_defaults()
+
 from nextverse.config import Config  # noqa: E402
 from nextverse.data.loading import load_split, pick_shots  # noqa: E402
 from nextverse.prompts.task import build_messages, target_json  # noqa: E402
@@ -26,7 +32,9 @@ def main() -> int:
     cfg = Config.load()
     from transformers import AutoTokenizer
 
-    tok = AutoTokenizer.from_pretrained(cfg.get("model.name"), local_files_only=True)
+    tok = AutoTokenizer.from_pretrained(
+        cfg.get("model.name"), local_files_only=local_files_only()
+    )
     raw = cfg.path("paths.raw")
 
     def ntok(s: str) -> int:

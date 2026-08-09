@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Aggregate every layer into results/report.md. Login node, no API.
+"""Aggregate every layer into results/report.md. CPU only, no API.
 
 Runs with whatever exists: if the judge has not been run, the deterministic
 layers are still reported and the judge sections say so explicitly rather than

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage 5: find and format failure candidates. Login node, no API.
+"""Stage 5: find and format failure candidates. CPU only, no API.
 
 Surfaces three distinct kinds of failure, because they have different causes
 and different fixes:

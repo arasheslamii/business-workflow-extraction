@@ -4,21 +4,23 @@
 seed: 20260807
 
 paths:
-  raw: data/raw                 # delivered by the data factory; NEVER written to
-  derived: data/derived         # any convenience files we compute (e.g. the
-                                # vertical_unseen_in_train axis) land here, kept
-                                # strictly separate from the raw delivery
+  raw: data/raw                 # canonical dataset copy; NEVER written to
+  derived: data/derived         # any computed convenience files land here, kept
+                                # strictly separate from the canonical copy
   results: results
-  hf_home: .hf_cache          # project-local: the only path visible from BOTH
-                              # the login node and saxa (/disk/scratch is node-local)
+  hf_home: .hf_cache          # project-local, so weights land beside the repo.
+                              # On clusters, prefer a shared filesystem path over
+                              # node-local scratch, which the compute node may not
+                              # share with wherever you ran the download.
 
 model:
   name: Qwen/Qwen2.5-1.5B-Instruct
-  dtype: bfloat16             # H200 MIG slice is Hopper; bf16 is native
-  load_in_4bit: false         # 1.5B bf16 weights ~3.1GB, fits 18GB with room to
-                              # spare. 4-bit adds a bitsandbytes/CUDA-13.2 risk
-                              # for no memory benefit at this scale. Flip to true
-                              # to exercise the QLoRA path.
+  dtype: bfloat16             # native on Ampere and newer; switch to float16
+                              # on older cards (e.g. Turing) that lack bf16
+  load_in_4bit: false         # 1.5B bf16 weights ~3.1GB, comfortable in an 8GB+
+                              # VRAM budget. 4-bit adds a bitsandbytes/CUDA build
+                              # dependency for no memory benefit at this scale.
+                              # Flip to true to exercise the QLoRA path.
 
   # Measured with the real tokenizer (scripts/01_check_lengths.py), not estimated:
   # longest train prompt+target is 1857 tok, median 1593. 2048 would in fact
@@ -64,8 +66,6 @@ judge:
   min_interval_s: 1.0           # request pacing; retries back off exponentially
   cache_dir: results/judge_cache
 
-# Stage 3 placeholder - not used by Stage 2, recorded here so the eventual
-# training run is configured from the same file.
 train:
   # LoRA rank 16 / alpha 32: alpha = 2*r is the standard scaling, and r=16 on a
   # 1.5B model is ~18M trainable params (~1.2%) - enough capacity to learn a
@@ -83,7 +83,7 @@ train:
   lr: 2.0e-4                    # standard LoRA LR; 10-20x higher than full FT
                                 # because only the low-rank adapters move
   epochs: 3
-  per_device_batch_size: 1      # seq len 2560 on an 18GB slice
+  per_device_batch_size: 1      # seq len 2560 within an 8GB+ VRAM budget
   # grad_accum 4, not 8: with n=120 the binding constraint is OPTIMIZER STEPS,
   # not batch size. 120/4 = 30 steps/epoch x 3 = 90 steps. At accum 8 we would
   # get 45 steps total, which is too few for a cosine schedule to do anything
@@ -91,8 +91,8 @@ train:
   grad_accum: 4
   scheduler: cosine
   warmup_ratio: 0.03
-  gradient_checkpointing: true  # ~30% slower, but guarantees the 2560-token
-                                # sequences fit the 18GB slice with headroom
+  gradient_checkpointing: true  # ~30% slower, but keeps the 2560-token sequences
+                                # inside a small VRAM budget with headroom
   logging_steps: 5
   eval_strategy: epoch          # dev loss each epoch = the overfitting signal
   save_strategy: epoch

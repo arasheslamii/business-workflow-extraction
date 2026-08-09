@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Layer 3: Gemini-as-judge. Login node, NEEDS INTERNET AND GEMINI_API_KEY.
+"""Layer 3: Gemini-as-judge. CPU only; needs internet and GEMINI_API_KEY.
 
 Every response is cached to results/judge_cache/, so re-running is free and
 deterministic. Use --dry-run first to see the exact call count before spending

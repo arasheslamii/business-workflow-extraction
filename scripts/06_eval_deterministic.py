@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Layers 1 and 2: structural + heuristic metrics. Login node, CPU, no API.
+"""Layers 1 and 2: structural + heuristic metrics. CPU only, no API.
 
 Runs in seconds and requires no key, so it can be re-run freely.
 Writes results/metrics_deterministic.json

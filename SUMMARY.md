@@ -5,8 +5,8 @@ business processes into a strict 10-field structured workflow analysis.
 
 ## What was built
 
-A fully scripted, seeded pipeline: synthetic data generation → QLoRA-capable
-LoRA fine-tune → three-layer evaluation → failure analysis. All of it runs
+A fully scripted, seeded pipeline: synthetic data generation → LoRA fine-tune
+(bf16; 4-bit path available) → three-layer evaluation → failure analysis. All of it runs
 non-interactively; the numbers below were produced by the code in this repo.
 
 **Data.** 120 train / 12 dev / 40 eval (28 synthetic + 12 real human-written PET
@@ -34,7 +34,7 @@ only) closes that gap and is what the tuned model is measured against.
 | AI-step grounding (content recall) | 0.230 | 0.326 | **0.420** |
 | Length ratio vs reference | 0.389 | 0.702 | **0.838** |
 | Judge rubric mean (1–5) | 3.04 | 3.23 | **3.41** |
-| Pairwise vs tuned | 3W/6T/31L | 3W/7T/30L | — |
+| Tuned's pairwise record vs this arm | 31W/6T/3L | 30W/7T/3L | — |
 
 Blinded pairwise, both orders: tuned wins **30/40 against the 2-shot baseline**
 (91% excluding ties), margin 95% CI **[+0.47, +0.85]** — clear of zero.

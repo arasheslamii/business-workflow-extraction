@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""QLoRA/LoRA fine-tune on the workflow-extraction task. GPU node.
+"""LoRA fine-tune on the workflow-extraction task (bf16 by default;
+4-bit QLoRA path available via model.load_in_4bit). Requires a CUDA GPU.
 
 Trains on train.jsonl, evaluates dev.jsonl each epoch. Loss is computed on the
 assistant turn only (see modeling/collator.py).
@@ -17,6 +18,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
+
+# Applied before torch/transformers import so HF_HOME and the cuBLAS
+# determinism flag take effect. Makes the scripts runnable standalone.
+from nextverse.env import apply_defaults, local_files_only  # noqa: E402
+
+apply_defaults()
 
 from nextverse.config import Config  # noqa: E402
 from nextverse.data.loading import load_split  # noqa: E402
@@ -45,7 +52,9 @@ def main() -> int:
 
     from transformers import AutoTokenizer
 
-    tok = AutoTokenizer.from_pretrained(cfg.get("model.name"), local_files_only=True)
+    tok = AutoTokenizer.from_pretrained(
+        cfg.get("model.name"), local_files_only=local_files_only()
+    )
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
     tok.padding_side = "right"  # training pads right; only generation needs left
@@ -83,7 +92,10 @@ def main() -> int:
     from nextverse.modeling.loader import load_model_and_tokenizer
 
     if not torch.cuda.is_available():
-        raise SystemExit("no CUDA device visible - are you inside the srun allocation?")
+        raise SystemExit(
+            "no CUDA device visible. This script needs a CUDA GPU "
+            "(>=8GB VRAM for the default bf16 1.5B + LoRA configuration)."
+        )
 
     model, _ = load_model_and_tokenizer(
         cfg.get("model.name"),

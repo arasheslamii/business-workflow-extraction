@@ -14,14 +14,19 @@ def load_model_and_tokenizer(
     dtype: str = "bfloat16",
     load_in_4bit: bool = False,
     adapter_path: str | Path | None = None,
-    local_files_only: bool = True,
+    local_files_only: bool | None = None,
 ):
     """Load base model, optionally applying a LoRA adapter.
 
-    local_files_only defaults True: the GPU node may have no internet, so a
-    missing cache must fail immediately with a clear message rather than hang
-    on a network call inside an srun allocation.
+    local_files_only=None means "decide from the environment": offline only if
+    the caller exported HF_HUB_OFFLINE/TRANSFORMERS_OFFLINE. Defaulting to True
+    would break a first run on a fresh machine, where the weights legitimately
+    need downloading.
     """
+    if local_files_only is None:
+        from ..env import local_files_only as _lfo
+
+        local_files_only = _lfo()
     torch_dtype = {"bfloat16": torch.bfloat16, "float16": torch.float16}.get(
         dtype, torch.float32
     )

@@ -5,7 +5,7 @@ Deliberately does NOT import data/raw/qc.py: the point is to re-derive the
 claims from the records themselves with separately written checks, so that a
 bug in the factory's QC cannot pass through silently.
 
-Pure stdlib so it runs on the login node before any venv exists.
+Pure stdlib so it runs before any virtualenv exists.
 
 Usage:  python3 scripts/02_verify_data.py
 Exit 1 if any hard check fails.

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# LOGIN NODE ONLY. Builds the venv, downloads model weights into a project-local
-# HF cache, and freezes an exact lock file.
+# Builds the venv, downloads model weights into a project-local HF cache, and
+# freezes an exact lock file.
 #
-# Runs here rather than inside the srun allocation because the GPU node is not
-# guaranteed internet access, and because burning an interactive GPU allocation
-# on pip downloads is wasteful.
+# Run this on a machine WITH internet. It is separated from the GPU steps so that
+# a training/inference machine without network access can still run the pipeline
+# from the pre-populated cache.
 #
 #   bash scripts/00_prep_env.sh              # exact pins
 #   bash scripts/00_prep_env.sh --flexible   # drop pins if a pin is unavailable
@@ -16,8 +16,8 @@ ROOT="$PWD"
 FLEXIBLE=0
 [[ "${1:-}" == "--flexible" ]] && FLEXIBLE=1
 
-# Project-local HF cache: the ONLY path guaranteed visible from both the login
-# node and saxa (/disk/scratch is node-local on this cluster).
+# Project-local HF cache. On a cluster, make sure this lives on a filesystem
+# shared with the compute node - node-local scratch will not be visible there.
 export HF_HOME="$ROOT/.hf_cache"
 mkdir -p "$HF_HOME"
 
@@ -70,5 +70,4 @@ python scripts/01_check_lengths.py
 
 echo
 echo "Prep complete. Activate with:  source .venv/bin/activate"
-echo "Always export HF_HOME=$ROOT/.hf_cache before GPU runs (the sbatch/srun"
-echo "wrappers in slurm/ do this for you)."
+echo "HF_HOME defaults to $ROOT/.hf_cache; scripts set it themselves."

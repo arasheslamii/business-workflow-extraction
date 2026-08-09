@@ -1,19 +1,25 @@
 #!/usr/bin/env bash
-# Runs a project command inside a GPU allocation on saxa.
+# OPTIONAL CONVENIENCE. The pipeline does not need this file: every script runs
+# standalone with plain `python scripts/NN_*.py` on any machine with a CUDA GPU.
 #
-# Used both by `srun ... bash slurm/run_gpu.sh <cmd>` (interactive) and by
-# sbatch (see header below). Centralising the environment setup means the
-# interactive and batch paths cannot drift apart.
+# This wrapper exists for SLURM sites. The #SBATCH directives below - partition
+# name, node list and GRES string - are SITE-SPECIFIC and almost certainly wrong
+# for your cluster. Check `sinfo -o "%P %N %G"` and edit before use.
+#
+# Usage:  sbatch slurm/run_gpu.sh python scripts/04_train.py
+#         srun <your-flags> --pty bash slurm/run_gpu.sh python scripts/03_run_base.py --arm zeroshot
 #
 #SBATCH --job-name=nextverse
-#SBATCH --partition=Teaching
-#SBATCH --nodelist=saxa
-#SBATCH --gres=gpu:h200_1g.18gb:1
+#SBATCH --partition=gpu            # SITE-SPECIFIC: your partition name
+#SBATCH --gres=gpu:1               # SITE-SPECIFIC: on multi-GRES nodes, name the
+                                   # exact type (e.g. gpu:a100_1g.10gb:1) or the
+                                   # slice you get - and your VRAM - is not
+                                   # reproducible run to run
 #SBATCH --mem=64G
 #SBATCH --cpus-per-task=4
 #SBATCH --time=03:00:00
-# 3h not 2h: a 1g.18gb slice has ~1/7 of the H200's SMs, and the zero-shot base
-# model is the arm most likely to ramble to the 2048-token cap on every example.
+# Generous: on a small GPU partition the zero-shot arm is the slowest, since it
+# is the most likely to generate to the token cap on every example.
 #SBATCH --output=results/slurm-%j.out
 set -euo pipefail
 
@@ -24,9 +30,9 @@ set -euo pipefail
 #   2. sbatch: Slurm executes a *copy* of this script from its spool directory,
 #      so BASH_SOURCE is useless and SLURM_SUBMIT_DIR is the right answer.
 #   3. Either of the above with a STALE inherited SLURM_SUBMIT_DIR - an
-#      interactive `srun --pty bash` started from $HOME exports
+#      interactive `srun --pty bash` started from your home directory exports
 #      SLURM_SUBMIT_DIR=$HOME into that shell, where it then outlives any later
-#      cd. Trusting it unconditionally was the original bug.
+#      cd. Trusting it unconditionally is a subtle trap.
 #
 # So: try candidates in priority order and accept the first that actually looks
 # like this project, rather than assuming any single one is correct.
@@ -52,13 +58,13 @@ ROOT="$(_find_root "${NEXTVERSE_ROOT:-}" "$_selfdir/.." "${SLURM_SUBMIT_DIR:-}" 
   echo "    script dir parent = '$_selfdir/..'" >&2
   echo "    SLURM_SUBMIT_DIR  = '${SLURM_SUBMIT_DIR:-<unset>}'" >&2
   echo "    PWD               = '$PWD'" >&2
-  echo "  Fix: export NEXTVERSE_ROOT=/home/s2806882/projects/nextVerse" >&2
+  echo "  Fix: export NEXTVERSE_ROOT=/path/to/nextVerse" >&2
   exit 2
 }
 cd "$ROOT"
 
 if [[ ! -f "$ROOT/.venv/bin/activate" ]]; then
-  echo "ERROR: no venv at $ROOT/.venv - run 'bash scripts/00_prep_env.sh' on the login node first." >&2
+  echo "ERROR: no venv at $ROOT/.venv - run 'bash scripts/00_prep_env.sh' first." >&2
   exit 2
 fi
 

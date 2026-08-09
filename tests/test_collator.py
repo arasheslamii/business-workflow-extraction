@@ -31,7 +31,7 @@ transformers = pytest.importorskip("transformers")
 def tok():
     cfg = Config.load()
     t = transformers.AutoTokenizer.from_pretrained(
-        cfg.get("model.name"), local_files_only=True
+        cfg.get("model.name"), local_files_only=False
     )
     if t.pad_token is None:
         t.pad_token = t.eos_token

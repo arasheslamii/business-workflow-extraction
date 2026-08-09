@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run an inference arm over the eval splits. GPU node.
+"""Run an inference arm over the eval splits. Requires a CUDA GPU.
 
 Arms:
   zeroshot  - base model, schema in prompt, no examples
@@ -28,6 +28,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
+
+# Applied before torch/transformers import so HF_HOME and the cuBLAS
+# determinism flag take effect. Makes the scripts runnable standalone.
+from nextverse.env import apply_defaults  # noqa: E402
+
+apply_defaults()
 
 from nextverse.config import Config  # noqa: E402
 from nextverse.data.loading import load_split, pick_shots  # noqa: E402
@@ -63,12 +69,15 @@ def main() -> int:
     if shots:
         print(f"few-shot exemplars: {[s['id'] for s in shots]}", flush=True)
 
-    # Imported late so --help works on the login node without torch installed.
+    # Imported late so --help works on a machine without torch installed.
     import torch
     from nextverse.modeling.loader import load_model_and_tokenizer
 
     if not torch.cuda.is_available():
-        raise SystemExit("no CUDA device visible - are you inside the srun allocation?")
+        raise SystemExit(
+            "no CUDA device visible. This script needs a CUDA GPU "
+            "(>=8GB VRAM for the default bf16 1.5B + LoRA configuration)."
+        )
     print(f"device: {torch.cuda.get_device_name(0)}", flush=True)
 
     model, tok = load_model_and_tokenizer(

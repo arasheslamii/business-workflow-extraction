@@ -22,3 +22,7 @@ results/slurm-*.out
 # Never commit credentials.
 .env
 *.key
+
+# Local tool/editor state - machine-specific, contains absolute paths.
+.claude/
+results/judge_run.log
