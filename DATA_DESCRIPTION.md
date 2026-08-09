@@ -4,7 +4,7 @@
 
 ## 1. Purpose and task
 
-Trains and evaluates a small LLM to convert a free-text description of how a small business currently runs a process — a rambling owner email, a process document, consultant notes, a chat transcript — into a strict 10-field structured workflow analysis. Output is a JSON object with exactly these keys, all required:
+Train an small LLM that convert a free-text description of how a small business currently runs a process, like receiving a rambling owner email, a process document, consultant notes, a chat transcript, into a strict 10-field structured workflow analysis. Output is a JSON object with exactly these keys, all required:
 
 | # | Field | Definition |
 |---|---|---|
