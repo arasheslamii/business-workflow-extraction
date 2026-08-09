@@ -16,6 +16,8 @@ code in this repository.
 | Results | [`SUMMARY.md`](SUMMARY.md) · [`results/report.md`](results/report.md) · [`results/failures.md`](results/failures.md) |
 
 ---
+### A compelete description of the dataset
+You can find a compelete description of dataset in DATA_DESCRIPTION.md
 
 ## The task
 
