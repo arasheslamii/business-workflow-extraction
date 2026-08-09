@@ -19,6 +19,104 @@ code in this repository.
 ### A compelete description of the dataset
 You can find a compelete description of dataset in  [`DATA_DESCRIPTION.md`](DATA_DESCRIPTION.md) 
 
+
+## If you want reproduce the results
+
+Verified end to end on a clean clone with a single consumer GPU. Nothing here
+depends on the machine the results were produced on.
+
+**Requirements:** Python 3.10+, one CUDA GPU with ≥8 GB VRAM for steps 3–5.
+Steps 1–2 and 6–7 are CPU-only.
+
+### 1. Clone and install
+
+```bash
+git clone https://github.com/arasheslamii/business-workflow-extraction.git
+cd business-workflow-extraction
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt -r requirements-gpu.txt
+```
+
+`requirements.lock.txt` records the exact versions the reported numbers were
+produced with, if you want a byte-for-byte environment.
+
+### 2. Verify the data and the code — CPU, ~1 minute
+
+```bash
+python scripts/02_verify_data.py     # schema, near-duplicates, train/eval leakage
+python -m pytest tests/ -q           # 28 tests
+```
+
+`02_verify_data.py` is pure stdlib and re-derives the quality claims
+independently rather than trusting the manifest shipped with the data.
+
+### 3. Baselines — GPU
+
+Smoke-test on three records first, then run the full arms:
+
+```bash
+python scripts/03_run_base.py --arm zeroshot --limit 3 --out /tmp/smoke
+
+python scripts/03_run_base.py --arm zeroshot
+python scripts/03_run_base.py --arm fewshot
+```
+
+Two baselines, not one. A zero-shot 1.5B fails mostly on JSON *formatting*, so a
+two-arm before/after would report a formatting win as a reasoning win. The 2-shot
+arm is the comparison that matters.
+
+### 4. Train — GPU, ~5 minutes
+
+```bash
+python scripts/04_train.py --dry-run   # CPU: verifies token masking and step counts
+python scripts/04_train.py             # writes ./results/adapter/
+```
+
+### 5. Tuned inference — GPU
+
+```bash
+python scripts/03_run_base.py --arm tuned --adapter results/adapter
+```
+
+### 6. Evaluation — CPU
+
+Layers 1 and 2 are deterministic and need no API key:
+
+```bash
+python scripts/06_eval_deterministic.py
+```
+
+Layer 3 is the LLM judge and needs a Gemini API key. **Skip it if you do not have
+one** — the report still regenerates completely from layers 1–2 and marks the
+judge section as not run.
+
+```bash
+export GEMINI_API_KEY=...
+python scripts/07_eval_judge.py --list-models   # confirm the configured judge is reachable
+python scripts/07_eval_judge.py --dry-run       # prints the call count, spends nothing
+python scripts/07_eval_judge.py --rubric --pairwise
+```
+
+Every judge response is cached to `results/judge_cache/`, so re-runs are free,
+resumable and identical.
+
+### 7. Report and failure analysis — CPU
+
+```bash
+python scripts/08_report.py            # -> results/report.md
+python scripts/09_failure_analysis.py  # -> results/failures.md
+```
+
+### If you only have five minutes
+
+```bash
+python scripts/02_verify_data.py && python -m pytest tests/ -q && python scripts/08_report.py
+```
+
+
+
+
+
 ## The task
 
 **Input** — a description of how a small business currently handles a process
