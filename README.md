@@ -11,9 +11,9 @@ code in this repository.
 
 | | |
 |---|---|
-| 📊 Dataset | [`ArashEslam/business-workflow-extraction`](https://huggingface.co/datasets/ArashEslam/business-workflow-extraction) |
-| 🧠 LoRA adapter | [`ArashEslam/qwen2.5-1.5b-workflow-lora`](https://huggingface.co/ArashEslam/qwen2.5-1.5b-workflow-lora) |
-| 📄 Findings | [`SUMMARY.md`](SUMMARY.md) · [`results/report.md`](results/report.md) · [`results/failures.md`](results/failures.md) |
+| Dataset | [`ArashEslam/business-workflow-extraction`](https://huggingface.co/datasets/ArashEslam/business-workflow-extraction) |
+| LoRA adapter | [`ArashEslam/qwen2.5-1.5b-workflow-lora`](https://huggingface.co/ArashEslam/qwen2.5-1.5b-workflow-lora) |
+| Results | [`SUMMARY.md`](SUMMARY.md) · [`results/report.md`](results/report.md) · [`results/failures.md`](results/failures.md) |
 
 ---
 
