@@ -1,0 +1,3167 @@
+{
+  "judge_model": "gemini-3.5-flash-lite",
+  "n_items": 40,
+  "rubric": {
+    "base_zeroshot": [
+      {
+        "id": "eval_pet_001",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 5,
+          "inputs_data_required": 3,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 2
+        },
+        "notes": "The ai_agent_steps field is the weakest because it lists generic high-level machine learning tasks that are completely ungrounded in the specific room service process described.",
+        "raw": "{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The ai_agent_steps field is the weakest because it lists generic high-level machine learning tasks that are completely ungrounded in the specific room service process described.\"\n}"
+      },
+      {
+        "id": "eval_pet_002",
+        "unparseable": false,
+        "scores": {
+          "objective": null,
+          "trigger": null,
+          "owner_and_participants": null,
+          "inputs_data_required": null,
+          "systems_involved": null,
+          "current_process": null,
+          "bottlenecks_and_risks": null,
+          "recommended_improved_process": null,
+          "ai_agent_steps": null,
+          "human_approvals_controls": null
+        },
+        "notes": "The human_approvals_controls field is completely absent (empty list) despite the process involving regulatory approvals and firm commitments.",
+        "raw": "{\n  \"objective\": \"3\",\n  \"trigger\": \"5\",\n  \"owner_and_participants\": \"3\",\n  \"inputs_data_required\": \"2\",\n  \"systems_involved\": \"5\",\n  \"current_process\": \"4\",\n  \"bottlenecks_and_risks\": \"2\",\n  \"recommended_improved_process\": \"3\",\n  \"ai_agent_steps\": \"4\",\n  \"human_approvals_controls\": \"1\",\n  \"notes\": \"The human_approvals_controls field is completely absent (empty list) despite the process involving regulatory approvals and firm commitments.\"\n}"
+      },
+      {
+        "id": "eval_pet_003",
+        "unparseable": false,
+        "scores": {
+          "objective": null,
+          "trigger": null,
+          "owner_and_participants": null,
+          "inputs_data_required": null,
+          "systems_involved": null,
+          "current_process": null,
+          "bottlenecks_and_risks": null,
+          "recommended_improved_process": null,
+          "ai_agent_steps": null,
+          "human_approvals_controls": null
+        },
+        "notes": "The bottlenecks_and_risks and human_approvals_controls fields rely heavily on generic assumptions rather than direct grounding in the description.",
+        "raw": "```json\n{\n  \"objective\": \"4\",\n  \"trigger\": \"5\",\n  \"owner_and_participants\": \"5\",\n  \"inputs_data_required\": \"3\",\n  \"systems_involved\": \"5\",\n  \"current_process\": \"4\",\n  \"bottlenecks_and_risks\": \"2\",\n  \"recommended_improved_process\": \"3\",\n  \"ai_agent_steps\": \"3\",\n  \"human_approvals_controls\": \"2\",\n  \"notes\": \"The bottlenecks_and_risks and human_approvals_controls fields rely heavily on generic assumptions rather than direct grounding in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_004",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 5,
+          "inputs_data_required": 5,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The systems_involved field scored a 1 because it is empty despite system T being mentioned in the description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 5,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The systems_involved field scored a 1 because it is empty despite system T being mentioned in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_005",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks and human_approvals_controls fields contain generic assumptions not grounded in the provided description.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks and human_approvals_controls fields contain generic assumptions not grounded in the provided description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_006",
+        "unparseable": false,
+        "scores": {
+          "objective": 3,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 3
+        },
+        "notes": "The owner_and_participants field incorrectly lists the 'Party' as the owner instead of a role within the business like the Mail Processing Unit or Registry.",
+        "raw": "```json\n{\n  \"objective\": 3,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The owner_and_participants field incorrectly lists the 'Party' as the owner instead of a role within the business like the Mail Processing Unit or Registry.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_007",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The systems_involved field is scored 1 because it is empty despite the description explicitly mentioning an 'information system'.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The systems_involved field is scored 1 because it is empty despite the description explicitly mentioning an 'information system'.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_008",
+        "unparseable": false,
+        "scores": {
+          "objective": 3,
+          "trigger": 5,
+          "owner_and_participants": 2,
+          "inputs_data_required": 2,
+          "systems_involved": 1,
+          "current_process": 2,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 4
+        },
+        "notes": "Systems involved is scored 1 because it is completely empty despite the description mentioning a system.",
+        "raw": "```json\n{\n  \"objective\": 3,\n  \"trigger\": 5,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 1,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"Systems involved is scored 1 because it is completely empty despite the description mentioning a system.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_009",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 5,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 4
+        },
+        "notes": "The owner_and_participants field lists participants redundantly and misses the treasurer as a participant alongside being listed as owner.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 5,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"The owner_and_participants field lists participants redundantly and misses the treasurer as a participant alongside being listed as owner.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_010",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 4
+        },
+        "notes": "The systems_involved field is scored 1 because it completely missed mentioning 'ACME Financial Accounting' which is explicitly named in the description.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"The systems_involved field is scored 1 because it completely missed mentioning 'ACME Financial Accounting' which is explicitly named in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_011",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 1
+        },
+        "notes": "The human_approvals_controls field scores a 1 because it hallucinates several approvals (like Head of Sales and Pre-Sales reviews) that completely contradict or are absent from the description, which only mentions the head of development stepping in for huge budgets.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 1,\n  \"notes\": \"The human_approvals_controls field scores a 1 because it hallucinates several approvals (like Head of Sales and Pre-Sales reviews) that completely contradict or are absent from the description, which only mentions the head of development stepping in for huge budgets.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_012",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 1,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 1
+        },
+        "notes": "The trigger field is completely incorrect and contradicts the description, which states the process starts every weekday morning with a database backup.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 1,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 1,\n  \"notes\": \"The trigger field is completely incorrect and contradicts the description, which states the process starts every weekday morning with a database backup.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_001",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 3
+        },
+        "notes": "The trigger field is poorly grounded because the description states the teacher or TA brings a list into the shop and takes the items away, not that they send it remotely.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 3,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The trigger field is poorly grounded because the description states the teacher or TA brings a list into the shop and takes the items away, not that they send it remotely.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_002",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 1,
+          "current_process": 4,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 4
+        },
+        "notes": "The systems_involved field is completely empty despite SOE being mentioned in the text, and recommended_improved_process fails to propose a genuinely improved workflow.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 1,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"The systems_involved field is completely empty despite SOE being mentioned in the text, and recommended_improved_process fails to propose a genuinely improved workflow.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_003",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 5,
+          "inputs_data_required": 2,
+          "systems_involved": 1,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 1
+        },
+        "notes": "The systems_involved, ai_agent_steps, and human_approvals_controls fields are empty or entirely absent, making them the weakest areas of the analysis.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 1,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 1,\n  \"notes\": \"The systems_involved, ai_agent_steps, and human_approvals_controls fields are empty or entirely absent, making them the weakest areas of the analysis.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_004",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 1,
+          "owner_and_participants": 5,
+          "inputs_data_required": 2,
+          "systems_involved": 3,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 2
+        },
+        "notes": "The trigger field is incorrect because the description states the account lead proposes dates to the client, not that the client requests the meeting.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 1,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 3,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The trigger field is incorrect because the description states the account lead proposes dates to the client, not that the client requests the meeting.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_005",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The recommended_improved_process field is the weakest because it remains vague and generic rather than outlining a concrete new workflow.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The recommended_improved_process field is the weakest because it remains vague and generic rather than outlining a concrete new workflow.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_006",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 1,
+          "inputs_data_required": 2,
+          "systems_involved": 5,
+          "current_process": 2,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 1
+        },
+        "notes": "The owner_and_participants field invents corporate roles (HR department, recruitment team) that completely contradict the small business context described.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 1,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 5,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 1,\n  \"notes\": \"The owner_and_participants field invents corporate roles (HR department, recruitment team) that completely contradict the small business context described.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_007",
+        "unparseable": false,
+        "scores": {
+          "objective": 2,
+          "trigger": 1,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 4,
+          "current_process": 2,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 1,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 1
+        },
+        "notes": "The trigger field scores a 1 because it completely misrepresents the scenario as a customer raising an invoice dispute rather than Kirsty reconciling monthly merchant statement lines.",
+        "raw": "```json\n{\n  \"objective\": 2,\n  \"trigger\": 1,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 4,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 1,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 1,\n  \"notes\": \"The trigger field scores a 1 because it completely misrepresents the scenario as a customer raising an invoice dispute rather than Kirsty reconciling monthly merchant statement lines.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_008",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 3,
+          "inputs_data_required": 3,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The weakest field is ai_agent_steps because it includes vague and risky suggestions like automating initial client contact for complaints, which is not grounded in the sensitive nature of the discussion.",
+        "raw": "{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The weakest field is ai_agent_steps because it includes vague and risky suggestions like automating initial client contact for complaints, which is not grounded in the sensitive nature of the discussion.\"\n}"
+      },
+      {
+        "id": "eval_syn_009",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 1,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The systems_involved field scored a 1 because it is completely empty despite the till being mentioned multiple times in the description.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 1,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The systems_involved field scored a 1 because it is completely empty despite the till being mentioned multiple times in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_010",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 5,
+          "systems_involved": 1,
+          "current_process": 4,
+          "bottlenecks_and_risks": 5,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 3
+        },
+        "notes": "The systems_involved field scored a 1 because it is empty despite the description explicitly mentioning a spreadsheet and a folder on a drive.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 5,\n  \"systems_involved\": 1,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 5,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The systems_involved field scored a 1 because it is empty despite the description explicitly mentioning a spreadsheet and a folder on a drive.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_011",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 1,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The systems_involved field is completely empty despite Sage and Excel being explicitly mentioned in the description.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 1,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The systems_involved field is completely empty despite Sage and Excel being explicitly mentioned in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_012",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 4,
+          "current_process": 2,
+          "bottlenecks_and_risks": 5,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 3
+        },
+        "notes": "The owner_and_participants and current_process fields are weakly grounded because the description explicitly states that ownership, participant roles, and the actual procedural steps could not be established.",
+        "raw": "{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 4,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 5,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The owner_and_participants and current_process fields are weakly grounded because the description explicitly states that ownership, participant roles, and the actual procedural steps could not be established.\"\n}"
+      },
+      {
+        "id": "eval_syn_013",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 5,
+          "inputs_data_required": 3,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The systems_involved field scored lowest because it is empty despite the description mentioning a practice management system and a mobile handset.",
+        "raw": "{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The systems_involved field scored lowest because it is empty despite the description mentioning a practice management system and a mobile handset.\"\n}"
+      },
+      {
+        "id": "eval_syn_014",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The owner_and_participants field invents roles like 'Insurance Claims Manager', 'Claims Analysts', and 'IT Support' that are not supported by the description of a two-vet small practice.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The owner_and_participants field invents roles like 'Insurance Claims Manager', 'Claims Analysts', and 'IT Support' that are not supported by the description of a two-vet small practice.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_015",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 2,
+          "systems_involved": 1,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 4
+        },
+        "notes": "Systems_involved is completely empty despite the description explicitly mentioning the CD book, Provet, and accounts.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 1,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"Systems_involved is completely empty despite the description explicitly mentioning the CD book, Provet, and accounts.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_016",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 1,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 4,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The trigger field is completely wrong, as it states the trigger is calling the vet's office rather than an animal being discharged.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 1,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 4,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The trigger field is completely wrong, as it states the trigger is calling the vet's office rather than an animal being discharged.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_017",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 3,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The systems_involved field is absent (empty array) despite obvious operational touchpoints in the description.",
+        "raw": "{\"objective\": 4, \"trigger\": 5, \"owner_and_participants\": 4, \"inputs_data_required\": 3, \"systems_involved\": 1, \"current_process\": 3, \"bottlenecks_and_risks\": 3, \"recommended_improved_process\": 2, \"ai_agent_steps\": 2, \"human_approvals_controls\": 2, \"notes\": \"The systems_involved field is absent (empty array) despite obvious operational touchpoints in the description.\"}"
+      },
+      {
+        "id": "eval_syn_018",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 4,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 1
+        },
+        "notes": "The ai_agent_steps and human_approvals_controls fields are empty despite being expected in a comprehensive workflow analysis.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 4,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 1,\n  \"notes\": \"The ai_agent_steps and human_approvals_controls fields are empty despite being expected in a comprehensive workflow analysis.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_019",
+        "unparseable": false,
+        "scores": {
+          "objective": 2,
+          "trigger": 2,
+          "owner_and_participants": 4,
+          "inputs_data_required": 3,
+          "systems_involved": 4,
+          "current_process": 2,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 2
+        },
+        "notes": "The ai_agent_steps field is empty, which violates the requirement for a recommended improved process workflow.",
+        "raw": "{\n  \"objective\": 2,\n  \"trigger\": 2,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 4,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The ai_agent_steps field is empty, which violates the requirement for a recommended improved process workflow.\"\n}"
+      },
+      {
+        "id": "eval_syn_020",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 3,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 2,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 1
+        },
+        "notes": "The weakest fields are `ai_agent_steps` and `human_approvals_controls` because they are entirely empty arrays despite the prompt implying a workflow analysis should cover AI steps.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 3,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 2,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 1,\n  \"notes\": \"The weakest fields are `ai_agent_steps` and `human_approvals_controls` because they are entirely empty arrays despite the prompt implying a workflow analysis should cover AI steps.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_021",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 2,
+          "systems_involved": 3,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 3
+        },
+        "notes": "The ai_agent_steps field is empty (scored 1) despite being a required component of the workflow analysis.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 3,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The ai_agent_steps field is empty (scored 1) despite being a required component of the workflow analysis.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_022",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 3,
+          "inputs_data_required": 3,
+          "systems_involved": 3,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The current_process field is scored lowest because it includes vague phrasing and introduces steps not supported by the text (like knowing the client or client confusion about the number of quotes).",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 3,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The current_process field is scored lowest because it includes vague phrasing and introduces steps not supported by the text (like knowing the client or client confusion about the number of quotes).\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_023",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 1,
+          "owner_and_participants": 3,
+          "inputs_data_required": 3,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The trigger field is completely incorrect and contradicts the description, as it attributes the trigger to Fiona's chat message rather than the annual audit schedule.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 1,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The trigger field is completely incorrect and contradicts the description, as it attributes the trigger to Fiona's chat message rather than the annual audit schedule.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_024",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 2,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 4
+        },
+        "notes": "inputs_data_required is the weakest field as it lists generic data types rather than the specific inputs mentioned in the description like abbreviated job cards, parts factor quotes, and hourly rates.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 3,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"inputs_data_required is the weakest field as it lists generic data types rather than the specific inputs mentioned in the description like abbreviated job cards, parts factor quotes, and hourly rates.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_025",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 3
+        },
+        "notes": "The trigger field is largely incorrect as it states the technician calls the workshop instead of calling factors directly.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The trigger field is largely incorrect as it states the technician calls the workshop instead of calling factors directly.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_026",
+        "unparseable": false,
+        "scores": {
+          "objective": 3,
+          "trigger": 1,
+          "owner_and_participants": 1,
+          "inputs_data_required": 4,
+          "systems_involved": 4,
+          "current_process": 1,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 2
+        },
+        "notes": "The trigger field scores a 1 because it fundamentally misattributes the customer's contact to the factor instead of the auto repair shop.",
+        "raw": "```json\n{\n  \"objective\": 3,\n  \"trigger\": 1,\n  \"owner_and_participants\": 1,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 4,\n  \"current_process\": 1,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The trigger field scores a 1 because it fundamentally misattributes the customer's contact to the factor instead of the auto repair shop.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_027",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 2,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 1
+        },
+        "notes": "The ai_agent_steps and human_approvals_controls fields are completely empty (scored 1), making them the weakest fields.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 1,\n  \"notes\": \"The ai_agent_steps and human_approvals_controls fields are completely empty (scored 1), making them the weakest fields.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_028",
+        "unparseable": false,
+        "scores": {
+          "objective": 3,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 1,
+          "current_process": 2,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "Systems_involved is completely empty despite the description mentioning a diary and a management system that can send texts/emails.",
+        "raw": "```json\n{\n  \"objective\": 3,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 1,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"Systems_involved is completely empty despite the description mentioning a diary and a management system that can send texts/emails.\"\n}\n```"
+      }
+    ],
+    "base_fewshot": [
+      {
+        "id": "eval_pet_001",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 5,
+          "inputs_data_required": 3,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 4
+        },
+        "notes": "The bottlenecks_and_risks field is the weakest because it introduces generic, ungrounded risks not mentioned in the source text.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"The bottlenecks_and_risks field is the weakest because it introduces generic, ungrounded risks not mentioned in the source text.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_002",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 3,
+          "inputs_data_required": 2,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 3
+        },
+        "notes": "The systems_involved field is scored 1 because it hallucinates specific software platforms and databases that are not supported by the description.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The systems_involved field is scored 1 because it hallucinates specific software platforms and databases that are not supported by the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_003",
+        "unparseable": false,
+        "scores": {
+          "objective": null,
+          "trigger": null,
+          "owner_and_participants": null,
+          "inputs_data_required": null,
+          "systems_involved": null,
+          "current_process": null,
+          "bottlenecks_and_risks": null,
+          "recommended_improved_process": null,
+          "ai_agent_steps": null,
+          "human_approvals_controls": null
+        },
+        "notes": "The trigger field is completely incorrect and contradicts the description, as the process starts when the MPON reports the meter operation, not when it reports an issue or completes.",
+        "raw": "```json\n{\n  \"objective\": \"4\",\n  \"trigger\": \"1\",\n  \"owner_and_participants\": \"4\",\n  \"inputs_data_required\": \"4\",\n  \"systems_involved\": \"2\",\n  \"current_process\": \"4\",\n  \"bottlenecks_and_risks\": \"2\",\n  \"recommended_improved_process\": \"4\",\n  \"ai_agent_steps\": \"3\",\n  \"human_approvals_controls\": \"3\",\n  \"notes\": \"The trigger field is completely incorrect and contradicts the description, as the process starts when the MPON reports the meter operation, not when it reports an issue or completes.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_004",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks and human_approvals_controls fields rely heavily on generic assumptions rather than specific challenges and controls mentioned in the text.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks and human_approvals_controls fields rely heavily on generic assumptions rather than specific challenges and controls mentioned in the text.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_005",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 4,
+          "current_process": 4,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 3
+        },
+        "notes": "The recommended_improved_process is the weakest field because it proposes generic improvements like machine learning and increasing withdrawal days without strong grounding in the description.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 4,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The recommended_improved_process is the weakest field because it proposes generic improvements like machine learning and increasing withdrawal days without strong grounding in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_006",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 3,
+          "systems_involved": 4,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "bottlenecks_and_risks and human_approvals_controls rely heavily on generic extrapolation rather than grounding in the description.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 4,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"bottlenecks_and_risks and human_approvals_controls rely heavily on generic extrapolation rather than grounding in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_007",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 3
+        },
+        "notes": "The bottlenecks_and_risks, recommended_improved_process, and ai_agent_steps fields are too generic and largely ungrounded in the provided text.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The bottlenecks_and_risks, recommended_improved_process, and ai_agent_steps fields are too generic and largely ungrounded in the provided text.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_008",
+        "unparseable": false,
+        "scores": {
+          "objective": null,
+          "trigger": null,
+          "owner_and_participants": null,
+          "inputs_data_required": null,
+          "systems_involved": null,
+          "current_process": null,
+          "bottlenecks_and_risks": null,
+          "recommended_improved_process": null,
+          "ai_agent_steps": null,
+          "human_approvals_controls": null
+        },
+        "notes": "Bottlenecks_and_risks includes several speculative risks not supported by the simple description.",
+        "raw": "```json\n{\n  \"objective\": \"4\",\n  \"trigger\": \"5\",\n  \"owner_and_participants\": \"4\",\n  \"inputs_data_required\": \"4\",\n  \"systems_involved\": \"3\",\n  \"current_process\": \"4\",\n  \"bottlenecks_and_risks\": \"2\",\n  \"recommended_improved_process\": \"3\",\n  \"ai_agent_steps\": \"3\",\n  \"human_approvals_controls\": \"4\",\n  \"notes\": \"Bottlenecks_and_risks includes several speculative risks not supported by the simple description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_009",
+        "unparseable": false,
+        "scores": {
+          "objective": null,
+          "trigger": null,
+          "owner_and_participants": null,
+          "inputs_data_required": null,
+          "systems_involved": null,
+          "current_process": null,
+          "bottlenecks_and_risks": null,
+          "recommended_improved_process": null,
+          "ai_agent_steps": null,
+          "human_approvals_controls": null
+        },
+        "notes": "Systems_involved is the weakest field because it hallucinates specific software systems not mentioned in the text.",
+        "raw": "```json\n{\n  \"objective\": \"4\",\n  \"trigger\": \"4\",\n  \"owner_and_participants\": \"3\",\n  \"inputs_data_required\": \"4\",\n  \"systems_involved\": \"2\",\n  \"current_process\": \"5\",\n  \"bottlenecks_and_risks\": \"3\",\n  \"recommended_improved_process\": \"4\",\n  \"ai_agent_steps\": \"4\",\n  \"human_approvals_controls\": \"3\",\n  \"notes\": \"Systems_involved is the weakest field because it hallucinates specific software systems not mentioned in the text.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_010",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 5,
+          "inputs_data_required": 3,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 4
+        },
+        "notes": "The bottlenecks_and_risks field is the weakest because it introduces several generic risks not specifically grounded in the provided text.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 3,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"The bottlenecks_and_risks field is the weakest because it introduces several generic risks not specifically grounded in the provided text.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_011",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 2,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The trigger field is the weakest because it incorrectly identifies the trigger as potential customers expressing interest, whereas the process actually begins with determining contact details to initiate outbound contact.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 2,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The trigger field is the weakest because it incorrectly identifies the trigger as potential customers expressing interest, whereas the process actually begins with determining contact details to initiate outbound contact.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_012",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 2,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 2
+        },
+        "notes": "The weakest field is ai_agent_steps because it is completely empty despite the prompt asking for recommendations.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 2,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The weakest field is ai_agent_steps because it is completely empty despite the prompt asking for recommendations.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_001",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 2,
+          "current_process": 5,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The owner_and_participants, systems_involved, and human_approvals_controls fields hallucinate roles (like an accountant) and systems (like inventory management) not mentioned in the description.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 2,\n  \"current_process\": 5,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The owner_and_participants, systems_involved, and human_approvals_controls fields hallucinate roles (like an accountant) and systems (like inventory management) not mentioned in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_002",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 4,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 3
+        },
+        "notes": "The recommended_improved_process and ai_agent_steps fields are weak because they propose generic, vague administrative steps rather than a concrete digital or automated workflow.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The recommended_improved_process and ai_agent_steps fields are weak because they propose generic, vague administrative steps rather than a concrete digital or automated workflow.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_003",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 4,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 3
+        },
+        "notes": "The current_process field scores poorly because it completely omits the actual staff-described practice of splitting the count and combining sheets, which created the described difficulties.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 4,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The current_process field scores poorly because it completely omits the actual staff-described practice of splitting the count and combining sheets, which created the described difficulties.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_004",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 2,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The systems_involved field is partly generic and hallucinates tools like Project Management Tools and Communication Software that are not in the description.",
+        "raw": "{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 2,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The systems_involved field is partly generic and hallucinates tools like Project Management Tools and Communication Software that are not in the description.\"\n}"
+      },
+      {
+        "id": "eval_syn_005",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 4,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The human_approvals_controls field is the weakest as it lists operational actions rather than specific approval gates or quality controls.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The human_approvals_controls field is the weakest as it lists operational actions rather than specific approval gates or quality controls.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_006",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 1,
+          "inputs_data_required": 3,
+          "systems_involved": 1,
+          "current_process": 2,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 2
+        },
+        "notes": "The owner_and_participants, systems_involved, and ai_agent_steps fields hallucinate corporate structures and systems entirely absent from the small business description.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 1,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 1,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The owner_and_participants, systems_involved, and ai_agent_steps fields hallucinate corporate structures and systems entirely absent from the small business description.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_007",
+        "unparseable": false,
+        "scores": {
+          "objective": 3,
+          "trigger": 1,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 1,
+          "current_process": 1,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The trigger field scores 1 because it fundamentally misinterprets the text, stating the trigger is a customer purchasing goods rather than Kirsty reviewing monthly statement lines without job numbers.",
+        "raw": "```json\n{\n  \"objective\": 3,\n  \"trigger\": 1,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 1,\n  \"current_process\": 1,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The trigger field scores 1 because it fundamentally misinterprets the text, stating the trigger is a customer purchasing goods rather than Kirsty reviewing monthly statement lines without job numbers.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_008",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 2
+        },
+        "notes": "The ai_agent_steps field is completely absent despite the prompt requiring recommendations.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The ai_agent_steps field is completely absent despite the prompt requiring recommendations.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_009",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 2,
+          "current_process": 2,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The owner_and_participants, systems_involved, current_process, and human_approvals_controls fields hallucinate roles, systems, and steps not supported by the description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 2,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The owner_and_participants, systems_involved, current_process, and human_approvals_controls fields hallucinate roles, systems, and steps not supported by the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_010",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 2,
+          "current_process": 5,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The systems_involved and human_approvals_controls fields are the weakest because they hallucinate tools and generic controls not supported by the text.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 2,\n  \"current_process\": 5,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The systems_involved and human_approvals_controls fields are the weakest because they hallucinate tools and generic controls not supported by the text.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_011",
+        "unparseable": false,
+        "scores": {
+          "objective": null,
+          "trigger": null,
+          "owner_and_participants": null,
+          "inputs_data_required": null,
+          "systems_involved": null,
+          "current_process": null,
+          "bottlenecks_and_risks": null,
+          "recommended_improved_process": null,
+          "ai_agent_steps": null,
+          "human_approvals_controls": null
+        },
+        "notes": "The human_approvals_controls field is the weakest because it contains a direct contradiction, claiming the Commercial Analyst manually signs schedules while also listing the Commercial Director.",
+        "raw": "```json\n{\n  \"objective\": \"4\",\n  \"trigger\": \"4\",\n  \"owner_and_participants\": \"4\",\n  \"inputs_data_required\": \"3\",\n  \"systems_involved\": \"4\",\n  \"current_process\": \"3\",\n  \"bottlenecks_and_risks\": \"4\",\n  \"recommended_improved_process\": \"4\",\n  \"ai_agent_steps\": \"3\",\n  \"human_approvals_controls\": \"2\",\n  \"notes\": \"The human_approvals_controls field is the weakest because it contains a direct contradiction, claiming the Commercial Analyst manually signs schedules while also listing the Commercial Director.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_012",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 2,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The systems_involved field is rated 2 because it hallucinates a CRM system that is not mentioned in the source description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 2,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The systems_involved field is rated 2 because it hallucinates a CRM system that is not mentioned in the source description.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_013",
+        "unparseable": false,
+        "scores": {
+          "objective": 3,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 3,
+          "systems_involved": 4,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 2
+        },
+        "notes": "The weakest field is ai_agent_steps because it is completely empty and missing from the analysis.",
+        "raw": "```json\n{\n  \"objective\": 3,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 4,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The weakest field is ai_agent_steps because it is completely empty and missing from the analysis.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_014",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 2,
+          "systems_involved": 2,
+          "current_process": 3,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The owner_and_participants, inputs_data_required, systems_involved, and human_approvals_controls fields hallucinate roles and systems not present in the small practice description, such as an 'Insurance Claims Team'.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 2,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The owner_and_participants, inputs_data_required, systems_involved, and human_approvals_controls fields hallucinate roles and systems not present in the small practice description, such as an 'Insurance Claims Team'.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_015",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 4,
+          "inputs_data_required": 2,
+          "systems_involved": 3,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 4
+        },
+        "notes": "The trigger field incorrectly treats the interview itself as the process trigger rather than the operational need to manage controlled drugs.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 3,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"The trigger field incorrectly treats the interview itself as the process trigger rather than the operational need to manage controlled drugs.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_016",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 3
+        },
+        "notes": "The trigger field incorrectly describes an ongoing action rather than the event that starts the process.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 3,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The trigger field incorrectly describes an ongoing action rather than the event that starts the process.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_017",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 5,
+          "human_approvals_controls": 4
+        },
+        "notes": "The current_process field is the weakest because it mixes descriptive actual steps with disjointed observations and misinterprets data from the text.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 5,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"The current_process field is the weakest because it mixes descriptive actual steps with disjointed observations and misinterprets data from the text.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_018",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The owner_and_participants field is weak because it hallucinates roles and responsibility details not supported by the description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The owner_and_participants field is weak because it hallucinates roles and responsibility details not supported by the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_019",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 2,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The current_process field is the weakest because it largely fabricates steps that did not happen in the chat.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The current_process field is the weakest because it largely fabricates steps that did not happen in the chat.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_020",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 2,
+          "current_process": 4,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The trigger field is weak because it mistakes a recurring practice for the actual event that initiates the time recording and billing cycle.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 2,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The trigger field is weak because it mistakes a recurring practice for the actual event that initiates the time recording and billing cycle.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_021",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 2,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 3
+        },
+        "notes": "The systems_involved field is rated 1 because it hallucinates specific internal systems like 'HR System' and 'Internal Communication Channels' that are directly contradicted by the text stating that policies and records are virtually non-existent.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The systems_involved field is rated 1 because it hallucinates specific internal systems like 'HR System' and 'Internal Communication Channels' that are directly contradicted by the text stating that policies and records are virtually non-existent.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_022",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 3,
+          "systems_involved": 4,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The weakest field is ai_agent_steps because it largely repeats general process improvements rather than specific, actionable steps an AI agent could take during the call or workflow.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 4,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The weakest field is ai_agent_steps because it largely repeats general process improvements rather than specific, actionable steps an AI agent could take during the call or workflow.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_023",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 1,
+          "owner_and_participants": 4,
+          "inputs_data_required": 3,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The trigger field is the weakest because it incorrectly states the audit is triggered by Fiona mentioning it in a team meeting rather than Priya's summer schedule.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 1,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The trigger field is the weakest because it incorrectly states the audit is triggered by Fiona mentioning it in a team meeting rather than Priya's summer schedule.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_024",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 4,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The recommended_improved_process and ai_agent_steps fields are too generic and introduce unnecessary enterprise complexity like machine learning algorithms rather than practical garage software.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The recommended_improved_process and ai_agent_steps fields are too generic and introduce unnecessary enterprise complexity like machine learning algorithms rather than practical garage software.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_025",
+        "unparseable": false,
+        "scores": {
+          "objective": 3,
+          "trigger": 2,
+          "owner_and_participants": 3,
+          "inputs_data_required": 3,
+          "systems_involved": 2,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The trigger field is the weakest because it inaccurately combines the technicians' phone call action with factors selecting the nearest supplier into a single incorrect process start event.",
+        "raw": "```json\n{\n  \"objective\": 3,\n  \"trigger\": 2,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 2,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The trigger field is the weakest because it inaccurately combines the technicians' phone call action with factors selecting the nearest supplier into a single incorrect process start event.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_026",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 3,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The systems_involved field scores a 1 because it hallucinates automated systems like 'Warranty tracking system' and 'Job card database' that directly contradict the text stating they look through physical job cards and have no records.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The systems_involved field scores a 1 because it hallucinates automated systems like 'Warranty tracking system' and 'Job card database' that directly contradict the text stating they look through physical job cards and have no records.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_027",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 1,
+          "bottlenecks_and_risks": 1,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 2
+        },
+        "notes": "The current_process field completely contradicts the description by claiming Col performs checks that Baz actually failed to do.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 1,\n  \"bottlenecks_and_risks\": 1,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 1,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The current_process field completely contradicts the description by claiming Col performs checks that Baz actually failed to do.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_028",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The trigger field is incorrect because it misses the main triggers described (booking a courtesy car or inquiring about job progress) and invents a sequence not supported by the text.",
+        "raw": "{\"objective\": 4, \"trigger\": 2, \"owner_and_participants\": 2, \"inputs_data_required\": 3, \"systems_involved\": 3, \"current_process\": 3, \"bottlenecks_and_risks\": 3, \"recommended_improved_process\": 4, \"ai_agent_steps\": 3, \"human_approvals_controls\": 2, \"notes\": \"The trigger field is incorrect because it misses the main triggers described (booking a courtesy car or inquiring about job progress) and invents a sequence not supported by the text.\"}"
+      }
+    ],
+    "tuned": [
+      {
+        "id": "eval_pet_001",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 1,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 1
+        },
+        "notes": "The recommended_improved_process and human_approvals_controls fields contain hallucinations and nonsensical logic that contradict the source description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 1,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 1,\n  \"notes\": \"The recommended_improved_process and human_approvals_controls fields contain hallucinations and nonsensical logic that contradict the source description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_002",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 3,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks and human_approvals_controls fields contain a significant amount of unsupported hallucinated information not found in the description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks and human_approvals_controls fields contain a significant amount of unsupported hallucinated information not found in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_003",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks field speculates extensively on issues (like missing reason codes, lack of message formats, and lack of customer records) not supported by the description.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks field speculates extensively on issues (like missing reason codes, lack of message formats, and lack of customer records) not supported by the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_004",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 5,
+          "systems_involved": 4,
+          "current_process": 4,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The human_approvals_controls field is the weakest because it introduces ungrounded controls (such as managerial approval thresholds and report sign-offs) not mentioned in the source description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 5,\n  \"systems_involved\": 4,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The human_approvals_controls field is the weakest because it introduces ungrounded controls (such as managerial approval thresholds and report sign-offs) not mentioned in the source description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_005",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 3
+        },
+        "notes": "The bottlenecks_and_risks and recommended_improved_process fields contain several points that contradict or misinterpret the provided description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The bottlenecks_and_risks and recommended_improved_process fields contain several points that contradict or misinterpret the provided description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_006",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 2,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks field includes several speculative claims and misstatements not grounded in the source text.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks field includes several speculative claims and misstatements not grounded in the source text.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_007",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 4,
+          "current_process": 3,
+          "bottlenecks_and_risks": 1,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks field scored 1 because it hallucinates severe operational failures and contradicts the text (e.g., claiming intakers are assigned without considering expertise, whereas the text explicitly states the team leader *does* take expertise, region, earlier contacts, and workload into account).",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 4,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 1,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks field scored 1 because it hallucinates severe operational failures and contradicts the text (e.g., claiming intakers are assigned without considering expertise, whereas the text explicitly states the team leader *does* take expertise, region, earlier contacts, and workload into account).\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_008",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 4,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks and human_approvals_controls fields contain speculative assumptions about delays and controls not grounded in the description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 4,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks and human_approvals_controls fields contain speculative assumptions about delays and controls not grounded in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_009",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 1,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The trigger field is completely incorrect, as it defines the trigger as the approval action rather than the employee purchasing a product or service.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 1,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The trigger field is completely incorrect, as it defines the trigger as the approval action rather than the employee purchasing a product or service.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_010",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 3,
+          "inputs_data_required": 5,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 3
+        },
+        "notes": "The weakest field is bottlenecks_and_risks because several listed risks misinterpret or contradict the provided description (e.g., claiming the 4-eyes principle applies only to bills *over* EUR 20 when the text says the Board checks bills *exceeding* EUR 20).",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 5,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The weakest field is bottlenecks_and_risks because several listed risks misinterpret or contradict the provided description (e.g., claiming the 4-eyes principle applies only to bills *over* EUR 20 when the text says the Board checks bills *exceeding* EUR 20).\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_011",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks and human_approvals_controls fields contain a significant amount of hallucinated or ungrounded speculation not supported by the description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks and human_approvals_controls fields contain a significant amount of hallucinated or ungrounded speculation not supported by the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_pet_012",
+        "unparseable": false,
+        "scores": {
+          "objective": 3,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The trigger field is the weakest because it completely misinterprets the text, stating the trigger is 'No new records are found' rather than the start of the weekday morning routine.",
+        "raw": "```json\n{\n  \"objective\": 3,\n  \"trigger\": 2,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 3,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The trigger field is the weakest because it completely misinterprets the text, stating the trigger is 'No new records are found' rather than the start of the weekday morning routine.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_001",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks field includes several hallucinations and distortions not supported by the description text.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks field includes several hallucinations and distortions not supported by the description text.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_002",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The owner_and_participants and human_approvals_controls fields are the weakest because they introduce unsupported roles and speculative governance controls not found in the description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The owner_and_participants and human_approvals_controls fields are the weakest because they introduce unsupported roles and speculative governance controls not found in the description.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_003",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 3,
+          "inputs_data_required": 2,
+          "systems_involved": 4,
+          "current_process": 3,
+          "bottlenecks_and_risks": 5,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The inputs_data_required and human_approvals_controls fields are the weakest because they include information not supported by or directly contradicted by the source text.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 4,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 5,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The inputs_data_required and human_approvals_controls fields are the weakest because they include information not supported by or directly contradicted by the source text.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_004",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 3,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks field is the weakest because several points misrepresent or contradict the description (such as claiming the client's view is never sought).",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 3,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks field is the weakest because several points misrepresent or contradict the description (such as claiming the client's view is never sought).\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_005",
+        "unparseable": false,
+        "scores": {
+          "objective": 3,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 2,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The weakest field is 'systems_involved' because it was left entirely empty despite Facebook and the club's actual internal systems being mentioned in the text.",
+        "raw": "```json\n{\n  \"objective\": 3,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The weakest field is 'systems_involved' because it was left entirely empty despite Facebook and the club's actual internal systems being mentioned in the text.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_006",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The human_approvals_controls field is the weakest because it introduces ungrounded elements like an 'HR team' not mentioned in the source description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The human_approvals_controls field is the weakest because it introduces ungrounded elements like an 'HR team' not mentioned in the source description.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_007",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The owner_and_participants field misidentifies Kirsty, Deano, and Baz's roles based on the text.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 3,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The owner_and_participants field misidentifies Kirsty, Deano, and Baz's roles based on the text.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_008",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 5,
+          "inputs_data_required": 2,
+          "systems_involved": 5,
+          "current_process": 5,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The inputs_data_required field is the weakest because it includes ungrounded items like checking if the complainant complained elsewhere.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 5,\n  \"current_process\": 5,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The inputs_data_required field is the weakest because it includes ungrounded items like checking if the complainant complained elsewhere.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_009",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The recommended improved process and subsequent fields include generic and unsupported steps like certificates of payment and annual variance reviews that do not fit the scale or details of this retail salon problem.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The recommended improved process and subsequent fields include generic and unsupported steps like certificates of payment and annual variance reviews that do not fit the scale or details of this retail salon problem.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_010",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 5,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The systems_involved field is completely empty despite the spreadsheet and folder being mentioned in the text.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 5,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The systems_involved field is completely empty despite the spreadsheet and folder being mentioned in the text.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_011",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 3
+        },
+        "notes": "The systems_involved field is completely empty (scored 1) despite Sage and Excel being explicitly mentioned in the text.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The systems_involved field is completely empty (scored 1) despite Sage and Excel being explicitly mentioned in the text.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_012",
+        "unparseable": true,
+        "scores": {
+          "objective": 1,
+          "trigger": 1,
+          "owner_and_participants": 1,
+          "inputs_data_required": 1,
+          "systems_involved": 1,
+          "current_process": 1,
+          "bottlenecks_and_risks": 1,
+          "recommended_improved_process": 1,
+          "ai_agent_steps": 1,
+          "human_approvals_controls": 1
+        }
+      },
+      {
+        "id": "eval_syn_013",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 2,
+          "systems_involved": 1,
+          "current_process": 4,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 3
+        },
+        "notes": "The weakest field is systems_involved because it is completely empty despite the text mentioning answerphones, mobile handsets, and a practice management system.",
+        "raw": "{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 2,\n  \"systems_involved\": 1,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The weakest field is systems_involved because it is completely empty despite the text mentioning answerphones, mobile handsets, and a practice management system.\"\n}"
+      },
+      {
+        "id": "eval_syn_014",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The bottlenecks_and_risks field includes several speculative details not supported by the description, such as a second pair of eyes and claims being resolved by now.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The bottlenecks_and_risks field includes several speculative details not supported by the description, such as a second pair of eyes and claims being resolved by now.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_015",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 4,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The bottlenecks_and_risks field hallucinated several severe misinterpretations, such as stating the consultant does the balance checks and that the practice holds nothing physically.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 4,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The bottlenecks_and_risks field hallucinated several severe misinterpretations, such as stating the consultant does the balance checks and that the practice holds nothing physically.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_016",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 2
+        },
+        "notes": "The human_approvals_controls field is the weakest because it introduces ungrounded bureaucratic steps not supported by the source description.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The human_approvals_controls field is the weakest because it introduces ungrounded bureaucratic steps not supported by the source description.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_017",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 5,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The human_approvals_controls field is the weakest because it introduces ungrounded roles like the practice owner and misrepresents current escalation discretion described in the text.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 5,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The human_approvals_controls field is the weakest because it introduces ungrounded roles like the practice owner and misrepresents current escalation discretion described in the text.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_018",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 1,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The trigger field is completely absent as it simply states 'Not specified in input'.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 1,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The trigger field is completely absent as it simply states 'Not specified in input'.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_019",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 4
+        },
+        "notes": "The current_process field is the weakest because it incorrectly states the matter is closed after 24 hours of silence and includes unsupported steps not present in the chat transcript.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"The current_process field is the weakest because it incorrectly states the matter is closed after 24 hours of silence and includes unsupported steps not present in the chat transcript.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_020",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 2,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 4,
+          "current_process": 3,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 3
+        },
+        "notes": "The 'ai_agent_steps' field is the weakest because it relies on recreating the flawed manual Friday reconstruction process rather than supporting the modern, automated workflow implied by the improvements.",
+        "raw": "{\n  \"objective\": 4,\n  \"trigger\": 2,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 4,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The 'ai_agent_steps' field is the weakest because it relies on recreating the flawed manual Friday reconstruction process rather than supporting the modern, automated workflow implied by the improvements.\"\n}"
+      },
+      {
+        "id": "eval_syn_021",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 3,
+          "systems_involved": 5,
+          "current_process": 4,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 4
+        },
+        "notes": "The inputs_data_required field lists data that wasn't actually part of the inputs used in the current process.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 5,\n  \"current_process\": 4,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 4,\n  \"notes\": \"The inputs_data_required field lists data that wasn't actually part of the inputs used in the current process.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_022",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 3,
+          "current_process": 3,
+          "bottlenecks_and_risks": 2,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The bottlenecks_and_risks field includes several hallucinations and exaggerations not supported by the description, such as claiming conveyancers do not know the fee scale at all and that the same person answers every call.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 3,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 2,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The bottlenecks_and_risks field includes several hallucinations and exaggerations not supported by the description, such as claiming conveyancers do not know the fee scale at all and that the same person answers every call.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_023",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The owner_and_participants field incorrectly assigns Fiona as the person taking the sample when the transcript clearly shows Priya does the audits.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The owner_and_participants field incorrectly assigns Fiona as the person taking the sample when the transcript clearly shows Priya does the audits.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_024",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 5,
+          "owner_and_participants": 4,
+          "inputs_data_required": 4,
+          "systems_involved": 4,
+          "current_process": 5,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 2,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The recommended_improved_process, ai_agent_steps, and human_approvals_controls fields are weak because they invent ungrounded, nonsensical business concepts like approving a published time guide above the owner and having AI chase MOT faults.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 5,\n  \"owner_and_participants\": 4,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 4,\n  \"current_process\": 5,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 2,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The recommended_improved_process, ai_agent_steps, and human_approvals_controls fields are weak because they invent ungrounded, nonsensical business concepts like approving a published time guide above the owner and having AI chase MOT faults.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_025",
+        "unparseable": false,
+        "scores": {
+          "objective": 4,
+          "trigger": 1,
+          "owner_and_participants": 2,
+          "inputs_data_required": 3,
+          "systems_involved": 5,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 3
+        },
+        "notes": "The trigger field scores 1 because it relies entirely on the fictional written procedure rather than actual current practice.",
+        "raw": "```json\n{\n  \"objective\": 4,\n  \"trigger\": 1,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 3,\n  \"systems_involved\": 5,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The trigger field scores 1 because it relies entirely on the fictional written procedure rather than actual current practice.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_026",
+        "unparseable": false,
+        "scores": {
+          "objective": 5,
+          "trigger": 4,
+          "owner_and_participants": 3,
+          "inputs_data_required": 4,
+          "systems_involved": 5,
+          "current_process": 3,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 4,
+          "ai_agent_steps": 4,
+          "human_approvals_controls": 3
+        },
+        "notes": "The owner_and_participants field is the weakest because it introduces a 'mechanic' role not explicitly stated in the source text and awkwardly lists participants.",
+        "raw": "```json\n{\n  \"objective\": 5,\n  \"trigger\": 4,\n  \"owner_and_participants\": 3,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 5,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 4,\n  \"ai_agent_steps\": 4,\n  \"human_approvals_controls\": 3,\n  \"notes\": \"The owner_and_participants field is the weakest because it introduces a 'mechanic' role not explicitly stated in the source text and awkwardly lists participants.\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_027",
+        "unparseable": false,
+        "scores": {
+          "objective": 3,
+          "trigger": 1,
+          "owner_and_participants": 5,
+          "inputs_data_required": 4,
+          "systems_involved": 4,
+          "current_process": 2,
+          "bottlenecks_and_risks": 4,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 2,
+          "human_approvals_controls": 2
+        },
+        "notes": "The trigger field scored 1 because it is completely empty ('Not specified in input').",
+        "raw": "```json\n{\n  \"objective\": 3,\n  \"trigger\": 1,\n  \"owner_and_participants\": 5,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 4,\n  \"current_process\": 2,\n  \"bottlenecks_and_risks\": 4,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 2,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The trigger field scored 1 because it is completely empty ('Not specified in input').\"\n}\n```"
+      },
+      {
+        "id": "eval_syn_028",
+        "unparseable": false,
+        "scores": {
+          "objective": 2,
+          "trigger": 4,
+          "owner_and_participants": 2,
+          "inputs_data_required": 4,
+          "systems_involved": 1,
+          "current_process": 3,
+          "bottlenecks_and_risks": 3,
+          "recommended_improved_process": 3,
+          "ai_agent_steps": 3,
+          "human_approvals_controls": 2
+        },
+        "notes": "The systems_involved field is completely empty despite the description mentioning a management system.",
+        "raw": "```json\n{\n  \"objective\": 2,\n  \"trigger\": 4,\n  \"owner_and_participants\": 2,\n  \"inputs_data_required\": 4,\n  \"systems_involved\": 1,\n  \"current_process\": 3,\n  \"bottlenecks_and_risks\": 3,\n  \"recommended_improved_process\": 3,\n  \"ai_agent_steps\": 3,\n  \"human_approvals_controls\": 2,\n  \"notes\": \"The systems_involved field is completely empty despite the description mentioning a management system.\"\n}\n```"
+      }
+    ]
+  },
+  "pairwise": {
+    "tuned_vs_base_fewshot": {
+      "aggregate": {
+        "n": 40,
+        "x_wins": 30,
+        "y_wins": 3,
+        "ties": 7,
+        "win_rate_excl_ties": 0.9090909090909091,
+        "position_inconsistency_rate": 0.175,
+        "margin_ci95": [
+          0.475,
+          0.85
+        ]
+      },
+      "rows": [
+        {
+          "id": "eval_pet_001",
+          "verdict": "Y",
+          "order1_verdict": "Y",
+          "order2_verdict": "Y",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 2 provides realistic bottlenecks, sensible recommendations, and proper role ownership, whereas Analysis 1 hallucinates absurd operational claims, such as taking two hours to bill or mandating wine on every order.",
+            "Analysis 1 provides a coherent workflow and sensible AI steps, whereas Analysis 2 contains severe logical errors, such as claiming billing delays take two hours and suggesting the kitchen should wait for the waiter."
+          ]
+        },
+        {
+          "id": "eval_pet_002",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 stays much closer to the provided text, whereas Analysis 2 relies heavily on generic business boilerplate and hallucinates specific software tools not mentioned in the source.",
+            "Analysis 2 provides a much more accurate and faithful mapping of the actual text provided, avoiding generic corporate filler and hallucinated tech tools found in Analysis 1."
+          ]
+        },
+        {
+          "id": "eval_pet_003",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a much more faithful, detailed, and logically sound breakdown of the text, whereas Analysis 1 includes generic hallucinations such as clarifying organizational roles via AI.",
+            "Analysis 1 provides specific, grounded operational insights and practical AI/human controls, whereas Analysis 2 relies on generic boilerplate text and hallucinates incorrect triggers and system names."
+          ]
+        },
+        {
+          "id": "eval_pet_004",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 identifies actual process risks and bottlenecks rather than generic platitudes, and captures the technical details of the text much more accurately.",
+            "Analysis 1 provides a more rigorous, text-grounded set of bottlenecks, actionable improvements, and specific AI/human control steps compared to the generic entries in Analysis 2."
+          ]
+        },
+        {
+          "id": "eval_pet_005",
+          "verdict": "Y",
+          "order1_verdict": "Y",
+          "order2_verdict": "Y",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 1 provides a more faithful and accurate representation of the as-is process steps and maintains better grounding in the text.",
+            "Analysis 2 provides a more faithful and accurate sequential breakdown of the current process without hallucinating risks or inventing unrealistic controls."
+          ]
+        },
+        {
+          "id": "eval_pet_006",
+          "verdict": "tie",
+          "order1_verdict": "X",
+          "order2_verdict": "Y",
+          "position_consistent": false,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 provides a more logical, accurate, and grounded as-is process breakdown and offers significantly more specific, actionable improvements and AI agent steps than the generic placeholders in Analysis 2.",
+            "Analysis 1 provides an accurate current process and realistic recommendations, whereas Analysis 2 misinterprets the text in several steps (e.g., claiming matter details are sent back on rejection) and includes factual errors."
+          ]
+        },
+        {
+          "id": "eval_pet_007",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a much more accurate, complete representation of the as-is process and grounds its bottlenecks and improvements directly in the provided text, whereas Analysis 1 hallucinates several steps and risks.",
+            "Analysis 1 provides a significantly more complete, accurate, and detailed breakdown of the workflow steps, inputs, and bottlenecks described in the text, whereas Analysis 2 misses major portions of the process and relies on generic statements."
+          ]
+        },
+        {
+          "id": "eval_pet_008",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 provides a more detailed, accurate, and grounded breakdown of the current process and introduces specific, actionable improvements and controls.",
+            "Analysis 2 provides a more faithful reflection of the provided text, whereas Analysis 1 hallucinates several subprocesses and generalized AI features not supported by the description."
+          ]
+        },
+        {
+          "id": "eval_pet_009",
+          "verdict": "tie",
+          "order1_verdict": "X",
+          "order2_verdict": "Y",
+          "position_consistent": false,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 accurately reflects the text's description of the current process and includes valid steps, whereas Analysis 2 misattributes the process owner and includes hallucinated or redundant AI agent steps.",
+            "Analysis 1 correctly captures the full process, systems, and practical AI improvements, whereas Analysis 2 misidentifies the trigger and process flow."
+          ]
+        },
+        {
+          "id": "eval_pet_010",
+          "verdict": "tie",
+          "order1_verdict": "X",
+          "order2_verdict": "Y",
+          "position_consistent": false,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 provides a more accurate, grounded workflow breakdown and more sensible, specific improvements without falling into generic boilerplate.",
+            "Analysis 1 provides a more complete and accurate mapping of the current workflow steps, participants, and controls described in the text."
+          ]
+        },
+        {
+          "id": "eval_pet_011",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 provides a more accurate current process breakdown, realistic bottlenecks, and sensible AI agent steps, whereas Analysis 2 includes nonsensical claims like AI automating exhibition participation and increasing staffing.",
+            "Analysis 2 provides a much more accurate current process, realistic bottlenecks, and sensible AI and human controls compared to Analysis 1's generic and hallucinatory suggestions."
+          ]
+        },
+        {
+          "id": "eval_pet_012",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a much more rigorous evaluation, identifying logical flaws and specific business risks in the process rather than just regurgitating the text like Analysis 1.",
+            "Analysis 1 correctly identifies the AI-agent steps and provides actionable, specific workflow improvements, whereas Analysis 2 leaves AI steps empty and lists generic improvements."
+          ]
+        },
+        {
+          "id": "eval_syn_001",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the actual messy reality of the shop's process without hallucinating inventory management systems or accountants.",
+            "Analysis 1 is much better grounded in the source text, correctly identifying the informal nature of the current process and avoiding the hallucinated roles, systems, and generalities found in Analysis 2."
+          ]
+        },
+        {
+          "id": "eval_syn_002",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a more accurate as-is process, better grounded bottlenecks, and more practical, specific recommendations and AI steps compared to Analysis 1's generic suggestions.",
+            "Analysis 1 provides a more accurate, grounded workflow and proposes realistic, structured improvements, whereas Analysis 2 includes nonsensical AI steps like verifying paper documents with OCR in real-time."
+          ]
+        },
+        {
+          "id": "eval_syn_003",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the full complexity of the description including the conflicting accounts, measurement discrepancies, and omission of tracking, whereas Analysis 1 misses major details and contradicts itself in the current process.",
+            "Analysis 1 captures the actual operational reality described in the text and includes meaningful AI agent steps, whereas Analysis 2 misses the staff's actual process and leaves the AI steps empty."
+          ]
+        },
+        {
+          "id": "eval_syn_004",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the current process and specific operational risks much more accurately from the text, whereas Analysis 1 introduces hallucinations like HR teams and automated leave processes not mentioned in the source.",
+            "Analysis 1 is much better grounded in the source text, correctly identifying gaps like unassigned ownership and unquantified metrics, whereas Analysis 2 hallucinates details not in the description."
+          ]
+        },
+        {
+          "id": "eval_syn_005",
+          "verdict": "tie",
+          "order1_verdict": "X",
+          "order2_verdict": "Y",
+          "position_consistent": false,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the current mess accurately without hallucinating systems like Analysis 1, and proposes much more practical AI steps and human controls.",
+            "Analysis 2 correctly identifies the owner and systems involved, and provides a much more coherent and practical set of AI agent steps and human controls."
+          ]
+        },
+        {
+          "id": "eval_syn_006",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 strictly grounds its workflow in the messy discovery notes without hallucinating an imaginary HR department or systems, unlike Analysis 1 which invents corporate structures not present in the text.",
+            "Analysis 1 stays strictly grounded in the chaotic reality of the source text, whereas Analysis 2 invents corporate entities like an HR department and HR database that were never mentioned."
+          ]
+        },
+        {
+          "id": "eval_syn_007",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 correctly identifies the roles and the actual process from the transcript, whereas Analysis 1 hallucinates customers making purchases and incorrect role assignments.",
+            "Analysis 1 accurately reflects the text and participants, whereas Analysis 2 completely hallucinates roles, workflows, and database systems not present in the chat transcript."
+          ]
+        },
+        {
+          "id": "eval_syn_008",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the nuances of the conversation accurately, notably the critical risk regarding false declarations on the PII renewal, whereas Analysis 1 includes hallucinated process steps and incorrect facts.",
+            "Analysis 1 correctly identifies the core process as handling complaints and provides sensible AI-agent steps, whereas Analysis 2 misidentifies the objective and includes empty AI steps."
+          ]
+        },
+        {
+          "id": "eval_syn_009",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 closely adheres to the provided text without inventing roles, systems, or HR processes that were not mentioned.",
+            "Analysis 1 stays much closer to the provided description, whereas Analysis 2 invents roles like HR, sales managers, and separate HR databases not mentioned in the text."
+          ]
+        },
+        {
+          "id": "eval_syn_010",
+          "verdict": "tie",
+          "order1_verdict": "X",
+          "order2_verdict": "Y",
+          "position_consistent": false,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the operational details and current process much more accurately, whereas Analysis 1 misses the Monday trigger and hallucinates systems involved.",
+            "Analysis 2 correctly captures the trigger and systems involved, whereas Analysis 1 misses the trigger and misidentifies human controls as AI steps."
+          ]
+        },
+        {
+          "id": "eval_syn_011",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the messy reality of the process\u2014including the conflicting statements about sign-offs, excluded rebates, and missing quote records\u2014whereas Analysis 1 smooths over these critical control failures and hallucinates unrealistic AI actions.",
+            "Analysis 1 captures the contradictory accounts between the analyst and director without hallucinating, whereas Analysis 2 includes logical contradictions in its human controls."
+          ]
+        },
+        {
+          "id": "eval_syn_012",
+          "verdict": "Y",
+          "order1_verdict": "Y",
+          "order2_verdict": "Y",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "unparseable output"
+          ]
+        },
+        {
+          "id": "eval_syn_013",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the current process and risks much more accurately from the text, whereas Analysis 1 includes hallucinated details like animal pick-up and misses key context.",
+            "Analysis 1 provides a more complete, well-grounded workflow analysis, whereas Analysis 2 leaves the ai_agent_steps array empty and includes confusing human controls that describe the current unideal process."
+          ]
+        },
+        {
+          "id": "eval_syn_014",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 is more grounded in the description, whereas Analysis 2 hallucinates a non-existent 'Insurance Claims Team' and a 'claims processing system' in the as-id process.",
+            "Analysis 2 is much more grounded in the realistic scale of a two-vet practice and avoids Analysis 1's hallucinated systems and corporate roles."
+          ]
+        },
+        {
+          "id": "eval_syn_015",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 is far better grounded in the specific text, correctly identifying the actual process steps, bottlenecks like retroactive signing, and practical veterinary systems like Provet.",
+            "Analysis 1 accurately identifies the core operational process from the transcript, whereas Analysis 2 mistakenly treats the interview itself as the process trigger and misinterprets the systems."
+          ]
+        },
+        {
+          "id": "eval_syn_016",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 is better grounded in the source text, correctly identifying the volatile whiteboard dependency and unallocated timing, whereas Analysis 2 invents systems and administrative roles not mentioned.",
+            "Analysis 2 is much better grounded in the source text, correctly identifying unknowns and missing systems, whereas Analysis 1 hallucinates details not present in the description."
+          ]
+        },
+        {
+          "id": "eval_syn_017",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 provides a more rigorous breakdown of the actual informal process, captures the root cause (unrevisited estimates), and includes sensible AI-agent steps, whereas Analysis 2 misses the reality of how the practice currently operates.",
+            "Analysis 2 captures the nuances of the current process, incorporates the observations about estimates and lack of records, and proposes specific, actionable improvements."
+          ]
+        },
+        {
+          "id": "eval_syn_018",
+          "verdict": "tie",
+          "order1_verdict": "Y",
+          "order2_verdict": "X",
+          "position_consistent": false,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 1 correctly captures the unstructured current reality and provides a coherent, logical workflow, whereas Analysis 2 misinterprets the current process as a static list of complaints and includes hallucinated or overly complex AI steps.",
+            "Analysis 1 correctly captures the unstructured, chaotic as-is state and provides specific, actionable AI agent steps and controls, whereas Analysis 2 describes a polished process that contradicts the messiness reported in the text."
+          ]
+        },
+        {
+          "id": "eval_syn_019",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 accurately captures the actual messy as-is process and ambiguities from the chat, whereas Analysis 1 hallucinates steps and a file opening checklist system that do not exist in the text.",
+            "Analysis 1 is far more grounded in the transcript and correctly maps the as-is process and risks, whereas Analysis 2 misinterprets basic facts such as who sent the email and invents non-existent systems."
+          ]
+        },
+        {
+          "id": "eval_syn_020",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 is far better grounded in the specific facts of the text and provides much more realistic, actionable recommendations and AI steps.",
+            "Analysis 2 is far more specific, tightly grounded in the discovery notes, and captures all key details such as the case management timer, write-offs, and cashier ledger."
+          ]
+        },
+        {
+          "id": "eval_syn_021",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 adheres much more closely to the provided text by acknowledging missing information and avoiding hallucinated systems and owners.",
+            "Analysis 1 stays strictly grounded in the provided text, whereas Analysis 2 invents an 'HR Manager' owner and specific software systems that were not mentioned in the source."
+          ]
+        },
+        {
+          "id": "eval_syn_022",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 is much better grounded in the source text, capturing specific details like leasehold pack variations and the lack of a quote log, whereas Analysis 2 is overly generic and introduces ungrounded steps.",
+            "Analysis 2 captures the nuances of the messy current process much more accurately and provides specific, actionable improvements compared to Analysis 1's generic points."
+          ]
+        },
+        {
+          "id": "eval_syn_023",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 correctly attributes process roles based on the transcript (Priya does the audits, Fiona asks about them) and provides a much more thorough, grounded, and useful breakdown than Analysis 2, which gets the roles backwards and relies on generic filler.",
+            "Analysis 2 is far more grounded in the text, correctly identifying Priya as the auditor (Analysis 1 swaps the roles), capturing the informal 'cupboard' sampling, and offering realistic, specific improvements and AI steps."
+          ]
+        },
+        {
+          "id": "eval_syn_024",
+          "verdict": "tie",
+          "order1_verdict": "X",
+          "order2_verdict": "Y",
+          "position_consistent": false,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 captures the specific details from the text much better, including the existing tech subscription that lacks a login and the exact operational bottlenecks, whereas Analysis 2 invents hallucinations like machine learning models and inaccurate system descriptions.",
+            "Analysis 1 provides a realistic, technology-enabled workflow improvement, whereas Analysis 2 misinterprets the text by claiming the technical data system lacks a login rather than noting the receptionist doesn't have one, and includes nonsensical recommendations."
+          ]
+        },
+        {
+          "id": "eval_syn_025",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 provides a more accurate as-is process and appropriately recognizes that the current process lacks proper documentation, whereas Analysis 2 confuses the as-is trigger with the actual informal practice.",
+            "Analysis 2 captures the messy reality of the as-is process accurately, whereas Analysis 1 confuses the fictional written procedure with the actual broken practice in its trigger and current process."
+          ]
+        },
+        {
+          "id": "eval_syn_026",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 is much better grounded in the specific text, whereas Analysis 1 hallucinates enterprise software and roles not mentioned in the source.",
+            "Analysis 1 stays much closer to the provided text, accurately reflecting the chaotic manual process, missing records, and lack of systems, whereas Analysis 2 hallucinates systems and roles not mentioned in the source."
+          ]
+        },
+        {
+          "id": "eval_syn_027",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 is far more grounded in the provided text, whereas Analysis 1 completely hallucinates the current process (attributing the checks to Col instead of Baz's failures) and misidentifies who did what.",
+            "Analysis 1 accurately reflects the text and includes all required fields, whereas Analysis 2 completely hallucinates the current process and fails to provide AI agent steps."
+          ]
+        },
+        {
+          "id": "eval_syn_028",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 is much better grounded in the specific text, correctly identifies the actual systems involved, and proposes sensible workflow improvements without hallucinating roles like customer service representatives.",
+            "Analysis 2 is much better grounded in the specific details of the provided text, whereas Analysis 1 includes hallucinated roles like 'Customer Service Representative' and misses key operational problems."
+          ]
+        }
+      ]
+    },
+    "tuned_vs_base_zeroshot": {
+      "aggregate": {
+        "n": 40,
+        "x_wins": 31,
+        "y_wins": 3,
+        "ties": 6,
+        "win_rate_excl_ties": 0.9117647058823529,
+        "position_inconsistency_rate": 0.15,
+        "margin_ci95": [
+          0.5,
+          0.875
+        ]
+      },
+      "rows": [
+        {
+          "id": "eval_pet_001",
+          "verdict": "tie",
+          "order1_verdict": "X",
+          "order2_verdict": "Y",
+          "position_consistent": false,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 adheres much better to the source text, whereas Analysis 2 includes several hallucinations and nonsensical recommendations not supported by the description.",
+            "Analysis 1 provides a concise, accurate as-is process and sensible improvements, whereas Analysis 2 includes several hallucinations and nonsensical claims in its bottlenecks and recommendations."
+          ]
+        },
+        {
+          "id": "eval_pet_002",
+          "verdict": "tie",
+          "order1_verdict": "X",
+          "order2_verdict": "Y",
+          "position_consistent": false,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 is much more complete and detailed, successfully fulfilling all 10 schema fields including AI steps and human controls, whereas Analysis 2 leaves several fields empty and offers a superficial improvement plan.",
+            "Analysis 1 stays strictly grounded in the provided text, whereas Analysis 2 invents extensive external details and operational steps not mentioned in the source description."
+          ]
+        },
+        {
+          "id": "eval_pet_003",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a much more faithful, grounded breakdown of the actual text, whereas Analysis 1 hallucinates generic enterprise buzzwords and machine learning tools not supported by the description.",
+            "Analysis 1 provides deep, specific bottlenecks and actionable improvements tied directly to the text, whereas Analysis 2 relies on generic buzzwords."
+          ]
+        },
+        {
+          "id": "eval_pet_004",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 is significantly better because it captures the systems involved (like System T), correctly identifies specific bottlenecks and risks from the narrative, and provides a much more coherent and accurate sequence of steps in the current process.",
+            "Analysis 1 provides a much more faithful, detailed sequence of the as-is process and more grounded, specific bottlenecks and improvements."
+          ]
+        },
+        {
+          "id": "eval_pet_005",
+          "verdict": "tie",
+          "order1_verdict": "X",
+          "order2_verdict": "Y",
+          "position_consistent": false,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a much more accurate and faithful representation of the actual process steps and constraints described in the text, whereas Analysis 1 includes several hallucinations and inaccuracies (e.g., claiming a confirmation is required when the text explicitly states it is not, and missing key workflow steps).",
+            "Analysis 2 provides a more faithful and accurate representation of the as-is process and realistic controls, whereas Analysis 1 includes several hallucinations and misinterpretations of the source text."
+          ]
+        },
+        {
+          "id": "eval_pet_006",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 provides a detailed, well-grounded breakdown of the process and specific, actionable improvements, whereas Analysis 2 is overly generic and hallucinates details not supported by the text.",
+            "Analysis 2 provides a much more thorough, realistic breakdown of the workflow, specific bottlenecks, and practical recommendations compared to the generic, repetitive AI points in Analysis 1."
+          ]
+        },
+        {
+          "id": "eval_pet_007",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a comprehensive, sequential step-by-step current process that faithfully reflects the description, whereas Analysis 1 presents an overly summarized and fragmented list.",
+            "Analysis 1 provides a thorough, highly faithful mapping of the as-is process and specific, well-grounded recommendations, whereas Analysis 2 misses entire systems and invents generic risks not tied to the text."
+          ]
+        },
+        {
+          "id": "eval_pet_008",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 provides a much more accurate reflection of the text, whereas Analysis 2 introduces ungrounded generic assumptions and hallucinated details.",
+            "Analysis 2 provides a far more accurate as-is process, better grounding in the text, and more concrete, sensible improvements compared to Analysis 1's generic buzzwords."
+          ]
+        },
+        {
+          "id": "eval_pet_009",
+          "verdict": "Y",
+          "order1_verdict": "Y",
+          "order2_verdict": "Y",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 2 correctly identifies the trigger, participants, and flow of the as-is process, whereas Analysis 1 introduces hallucinations and factual errors about the process steps.",
+            "Analysis 1 captures the complete workflow and looping structure correctly, whereas Analysis 2 misidentifies the process trigger and includes factual inaccuracies about the current process flow."
+          ]
+        },
+        {
+          "id": "eval_pet_010",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 captures the specific details of the process\u2014such as the docket, internal mail routing, and the EUR 20 board threshold\u2014whereas Analysis 2 is overly generic and contains factual hallucinations in its bottleneck section.",
+            "Analysis 2 provides a much more faithful, detailed, and accurate breakdown of the actual text, whereas Analysis 1 is overly generic and includes factual hallucinations regarding the workflow."
+          ]
+        },
+        {
+          "id": "eval_pet_011",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 is much more thoroughly grounded in the text, correctly capturing the nuance around large-budget exceptions, the 2-week follow-up rule, and the head of development's involvement.",
+            "Analysis 2 is much better grounded in the source text, correctly capturing the conditional logic for huge budgets and the 2-week follow-up rule, whereas Analysis 1 misinterprets the 2-week follow-up as a negative risk and hallucinates unauthorized human controls."
+          ]
+        },
+        {
+          "id": "eval_pet_012",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 is far better grounded in the source text, correctly captures all systems and constraints, and provides specific, logical risks and recommendations unlike the generic placeholders in Analysis 1.",
+            "Analysis 1 is much better grounded in the source text, correctly captures the detailed conditional logic of the process, and provides specific, actionable recommendations."
+          ]
+        },
+        {
+          "id": "eval_syn_001",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 is much better grounded in the text, correctly identifying the ambiguities in ownership, the missing PO numbers, and the inability to generate statements, whereas Analysis 1 invents roles and hallucinates unrealistic technical fixes like an AI generating PO numbers out of thin air.",
+            "Analysis 1 captures the current process, bottlenecks, and practical recommendations much more accurately based on the provided text, whereas Analysis 2 introduces ungrounded roles and generic suggestions."
+          ]
+        },
+        {
+          "id": "eval_syn_002",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the nuances, risks, and specific details from the text much better, whereas Analysis 1's recommended process and AI steps are generic and poorly structured.",
+            "Analysis 1 is much more detailed, accurately captures the systems involved (SOE), and provides actionable recommendations and realistic AI steps, whereas Analysis 2 fails to list SOE in systems and confuses the improved process list by merely repeating the current steps."
+          ]
+        },
+        {
+          "id": "eval_syn_003",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the actual current practices, operational risks, and practical improvements much more completely than Analysis 1, which misses key details from the description.",
+            "Analysis 1 is far more complete, correctly captures the actual operational discrepancies from the text, and includes well-reasoned AI and human control steps."
+          ]
+        },
+        {
+          "id": "eval_syn_004",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a much more faithful, detailed breakdown of the current process, real bottlenecks, and includes well-reasoned AI steps and human controls, whereas Analysis 1 misinterprets the trigger and lists generic improvements.",
+            "Analysis 1 captures the unstructured process details, gaps, and practical AI/human controls much more thoroughly than Analysis 2."
+          ]
+        },
+        {
+          "id": "eval_syn_005",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a more accurate as-is process, better grounding in the text, and much more practical, specific recommendations and AI-agent steps.",
+            "Analysis 1 is superior because it accurately captures the current workflow issues and provides actionable, specific recommendations and AI steps that fit the context."
+          ]
+        },
+        {
+          "id": "eval_syn_006",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 is much better grounded in the specific messy details of the source text, correctly capturing uncertainties instead of hallucinating standard HR procedures like Analysis 1 does.",
+            "Analysis 1 captures the unstructured, messy reality of the description much better, whereas Analysis 2 invents corporate entities like 'HR department' and 'recruitment team' that were not present."
+          ]
+        },
+        {
+          "id": "eval_syn_007",
+          "verdict": "tie",
+          "order1_verdict": "Y",
+          "order2_verdict": "X",
+          "position_consistent": false,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 1 correctly identifies the roles (Kirsty, Deano, Baz) and reflects the actual text, whereas Analysis 2 gets the roles wrong (calling Baz office manager and Kirsty/Deano owners) and hallucinates details not in the source text.",
+            "Analysis 1 is far more grounded in the text, correctly captures all 10 required fields, and provides concrete recommendations and AI steps, whereas Analysis 2 misidentifies the core process and misses several fields."
+          ]
+        },
+        {
+          "id": "eval_syn_008",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a much better-grounded, specific, and realistic breakdown of the current process, risks (including the PII renewal issue), and actionable AI/human controls.",
+            "Analysis 1 captures the specific compliance risks (like the PII renewal issue) and provides much more grounded and practical details than Analysis 2."
+          ]
+        },
+        {
+          "id": "eval_syn_009",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 captures the as-is process and bottlenecks much more accurately and thoroughly based on the provided text, whereas Analysis 1 includes hallucinated roles like 'Sales Team' and generic AI steps that don't fit the small business context.",
+            "Analysis 1 captures the specific operational details and core problems from the description much more accurately than Analysis 2."
+          ]
+        },
+        {
+          "id": "eval_syn_010",
+          "verdict": "Y",
+          "order1_verdict": "Y",
+          "order2_verdict": "Y",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 1 correctly identifies the trigger from the text and provides a much more structured, realistic, and actionable improvement plan compared to Analysis 2's vague and repetitive points.",
+            "Analysis 2 correctly identifies the trigger and captures the exact current process steps without hallucinating or including extraneous commentary."
+          ]
+        },
+        {
+          "id": "eval_syn_011",
+          "verdict": "tie",
+          "order1_verdict": "Y",
+          "order2_verdict": "X",
+          "position_consistent": false,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 1 provides a concise, structured, and forward-looking workflow analysis, whereas Analysis 2 merely regurgitates raw text blocks into lists and fails to identify the process owner.",
+            "Analysis 1 captures the specific contradictions and messy realities of the current process much more thoroughly than Analysis 2, which relies on generic business language."
+          ]
+        },
+        {
+          "id": "eval_syn_012",
+          "verdict": "Y",
+          "order1_verdict": "Y",
+          "order2_verdict": "Y",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "unparseable output"
+          ]
+        },
+        {
+          "id": "eval_syn_013",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 provides a far more complete, grounded, and specific breakdown of the current process, real risks, and actionable improvements compared to the vague generalizations in Analysis 1.",
+            "Analysis 1 is much more complete and captures the nuances of the description, whereas Analysis 2 is overly brief and omits critical parts of the current process and risks."
+          ]
+        },
+        {
+          "id": "eval_syn_014",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 stays much closer to the provided description, capturing the reality of the office tray, the lack of tracking, and the specific practice context, whereas Analysis 2 invents roles like an Insurance Claims Manager and IT Support that do not exist in a two-vet practice.",
+            "Analysis 2 captures the messy reality of the small two-vet practice much more accurately, whereas Analysis 1 invents corporate roles like 'Insurance Claims Manager' and 'Claims Analysts' that do not exist there."
+          ]
+        },
+        {
+          "id": "eval_syn_015",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 correctly identifies the systems, captures the actual workflow steps and compliance risks, and proposes much more sensible AI agent steps than Analysis 1.",
+            "Analysis 1 is far more grounded in the text, correctly captures the participants and systems, and provides much more specific and realistic operational recommendations."
+          ]
+        },
+        {
+          "id": "eval_syn_016",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 accurately captures the current messy process and proposes specific, grounded improvements and sensible human controls, whereas Analysis 2 misidentifies the trigger and process steps.",
+            "Analysis 2 is much better grounded in the specific details of the description, whereas Analysis 1 includes hallucinated process steps and a nonsensical trigger."
+          ]
+        },
+        {
+          "id": "eval_syn_017",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 captures the specific nuances of the text\u2014such as un-updated estimates, unrecorded discounts, and professional body complaints\u2014making its risks, recommendations, and controls far more grounded and useful than Analysis 2's generic generalizations.",
+            "Analysis 2 captures the rich context and specific failure points from the description far more thoroughly than Analysis 1."
+          ]
+        },
+        {
+          "id": "eval_syn_018",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 is much better grounded in the specific details of the provided text, whereas Analysis 1 invents generic roles and processes not mentioned in the source.",
+            "Analysis 1 accurately captures the messy, undefined nature of the current process from the text, whereas Analysis 2 invents roles and structured steps not present in the description."
+          ]
+        },
+        {
+          "id": "eval_syn_019",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 correctly identifies the business objective and process, provides a much sharper and more accurate breakdown of risks, and includes sensible AI agent and human control steps.",
+            "Analysis 1 correctly captures the actual business workflow being discussed rather than treating the chat transcript as the literal process steps, unlike Analysis 2."
+          ]
+        },
+        {
+          "id": "eval_syn_020",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 provides a more thorough, accurate, and actionable workflow breakdown with specific AI agent steps and human controls, whereas Analysis 2 leaves those sections empty and is overly brief.",
+            "Analysis 2 captures the as-is process, bottlenecks, and specific domain challenges (like write-offs and recovery rates) far more thoroughly and accurately than Analysis 1."
+          ]
+        },
+        {
+          "id": "eval_syn_021",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 is far more thorough, accurately capturing the unstructured and unrecorded nature of the current process, whereas Analysis 1 hallucinates details like automated payroll processing.",
+            "Analysis 1 is much more thorough, accurately capturing the ambiguity in the current process, whereas Analysis 2 oversimplifies and misclassifies system behaviors and controls."
+          ]
+        },
+        {
+          "id": "eval_syn_022",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 is much more thorough, accurately capturing specific details from the text like tenure types, leasehold pack uncertainties, and the missing quote log, whereas Analysis 2 is vague and hallucinates team structures.",
+            "Analysis 2 captures the specifics of the text much better, including the actual disbursements mentioned, accurate identification of the core business problems, and highly practical improvements and AI steps."
+          ]
+        },
+        {
+          "id": "eval_syn_023",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 is much more thorough, accurately assigns roles based on the transcript (unlike Analysis 2 which swaps Priya and Fiona's roles), and provides specific, actionable recommendations and AI steps.",
+            "Analysis 2 is far more grounded in the text, correctly identifying roles (assigning tasks to Priya rather than Fiona), capturing the current process accurately, and providing specific, sensible improvements and AI steps."
+          ]
+        },
+        {
+          "id": "eval_syn_024",
+          "verdict": "tie",
+          "order1_verdict": "X",
+          "order2_verdict": "Y",
+          "position_consistent": false,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 provides much better detail, captures the specific business context accurately, and includes actionable, realistic recommendations and controls.",
+            "Analysis 1 provides a realistic, practical operational workflow and sensible software recommendations, whereas Analysis 2 misinterprets the text in its current process and invents nonsensical human controls like requiring approvals 'above the owner'."
+          ]
+        },
+        {
+          "id": "eval_syn_025",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 correctly distinguishes between the official written procedure and actual practice, accurately identifies the current workflow steps, and provides much more grounded and practical improvements and controls.",
+            "Analysis 2 correctly captures the actual chaotic reality described in the text for the current process, whereas Analysis 1 confuses the fictional written procedure with what is actually happening."
+          ]
+        },
+        {
+          "id": "eval_syn_026",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 is far more grounded in the text, correctly identifying the internal business processes and actors rather than hallucinating external ones like Analysis 1 did.",
+            "Analysis 1 accurately captures the chaos and unstructured nature of the business process described, whereas Analysis 2 misinterprets the roles and fails to include AI-agent steps."
+          ]
+        },
+        {
+          "id": "eval_syn_027",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": false,
+          "reasons": [
+            "Analysis 2 correctly identifies the systems, captures the risks and bottlenecks accurately, and provides a much more thorough and grounded process breakdown.",
+            "Analysis 1 correctly captures the actual dialogue, correctly identifies the systems involved, and provides a comprehensive and realistic improvement plan including AI steps and controls, whereas Analysis 2 misinterprets several key facts from the conversation."
+          ]
+        },
+        {
+          "id": "eval_syn_028",
+          "verdict": "X",
+          "order1_verdict": "X",
+          "order2_verdict": "X",
+          "position_consistent": true,
+          "x_presented_first": true,
+          "reasons": [
+            "Analysis 1 stays much closer to the text and accurately reflects the current workflow, whereas Analysis 2 invents roles not present in the description such as an Insurance Coordinator and Job Card Clerk.",
+            "Analysis 2 accurately reflects the garage's existing manual process and constraints, whereas Analysis 1 hallucinates roles like 'Insurance Coordinator' and 'Job Card Clerk' and invents unrealistic automated insurance additions."
+          ]
+        }
+      ]
+    }
+  },
+  "client_stats": {
+    "cache_hits": 21,
+    "api_calls": 254,
+    "retries": 83
+  }
+}

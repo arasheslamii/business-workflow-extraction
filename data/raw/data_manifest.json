@@ -1,0 +1,418 @@
+{
+  "dataset": "business-workflow-extraction",
+  "generation_date": "2026-08-07",
+  "generator": "Claude Opus 5 (synthetic authoring); PET slice is real human-written text",
+  "task": "free-text description of a small-business process -> 10-field structured JSON",
+  "record_counts": {
+    "train": 120,
+    "dev": 12,
+    "eval_synthetic": 28,
+    "eval_pet": 12
+  },
+  "total_records": 172,
+  "splits": {
+    "train": {
+      "n": 120,
+      "input_words": {
+        "min": 178,
+        "p25": 247,
+        "median": 272,
+        "p75": 289,
+        "max": 341,
+        "mean": 266.0,
+        "outside_80_350": 0
+      },
+      "empty_list_fields_pct": {
+        "inputs_data_required": 0.0,
+        "systems_involved": 9.2,
+        "current_process": 0.0,
+        "bottlenecks_and_risks": 0.0,
+        "recommended_improved_process": 0.0,
+        "ai_agent_steps": 0.0,
+        "human_approvals_controls": 0.0
+      },
+      "not_specified_counts": {
+        "objective": 0,
+        "trigger": 0,
+        "owner": 36
+      },
+      "avg_items_per_list_field": {
+        "inputs_data_required": 3.2,
+        "systems_involved": 2.7,
+        "current_process": 5.9,
+        "bottlenecks_and_risks": 6.3,
+        "recommended_improved_process": 6.6,
+        "ai_agent_steps": 4.0,
+        "human_approvals_controls": 4.0
+      },
+      "vertical": {
+        "accounting firm": 10,
+        "dental/GP clinic": 10,
+        "e-commerce brand": 10,
+        "gym": 10,
+        "hair salon": 10,
+        "independent retail": 10,
+        "marketing agency": 10,
+        "plumbing/trades": 10,
+        "private tutoring": 10,
+        "property management": 10,
+        "restaurant": 10,
+        "wholesale distributor": 10
+      },
+      "process": {
+        "appointment scheduling": 10,
+        "complaint handling": 10,
+        "compliance/reporting": 10,
+        "customer onboarding": 10,
+        "customer support": 10,
+        "hiring": 10,
+        "inventory/stock": 10,
+        "invoicing/billing": 10,
+        "payroll": 10,
+        "quote generation": 10,
+        "refunds/returns": 10,
+        "supplier orders": 10
+      },
+      "style": {
+        "chat_transcript": 32,
+        "consultant_call_notes": 31,
+        "formal_process_doc": 30,
+        "rambling_owner_email": 27
+      },
+      "difficulty": {
+        "contradictory": 15,
+        "standard": 75,
+        "vague": 30
+      },
+      "ood_vertical_count": 0,
+      "mean_ai_step_grounding": 0.83
+    },
+    "dev": {
+      "n": 12,
+      "input_words": {
+        "min": 161,
+        "p25": 202,
+        "median": 220,
+        "p75": 232,
+        "max": 248,
+        "mean": 212.2,
+        "outside_80_350": 0
+      },
+      "empty_list_fields_pct": {
+        "inputs_data_required": 0.0,
+        "systems_involved": 16.7,
+        "current_process": 0.0,
+        "bottlenecks_and_risks": 0.0,
+        "recommended_improved_process": 0.0,
+        "ai_agent_steps": 0.0,
+        "human_approvals_controls": 0.0
+      },
+      "not_specified_counts": {
+        "objective": 0,
+        "trigger": 0,
+        "owner": 2
+      },
+      "avg_items_per_list_field": {
+        "inputs_data_required": 2.5,
+        "systems_involved": 2.3,
+        "current_process": 5.6,
+        "bottlenecks_and_risks": 6.3,
+        "recommended_improved_process": 6.6,
+        "ai_agent_steps": 4.0,
+        "human_approvals_controls": 4.0
+      },
+      "vertical": {
+        "accounting firm": 1,
+        "dental/GP clinic": 1,
+        "e-commerce brand": 1,
+        "gym": 1,
+        "hair salon": 1,
+        "independent retail": 1,
+        "marketing agency": 1,
+        "plumbing/trades": 1,
+        "private tutoring": 1,
+        "property management": 1,
+        "restaurant": 1,
+        "wholesale distributor": 1
+      },
+      "process": {
+        "appointment scheduling": 1,
+        "complaint handling": 1,
+        "compliance/reporting": 1,
+        "customer onboarding": 1,
+        "customer support": 1,
+        "hiring": 1,
+        "inventory/stock": 1,
+        "invoicing/billing": 1,
+        "payroll": 1,
+        "quote generation": 1,
+        "refunds/returns": 1,
+        "supplier orders": 1
+      },
+      "style": {
+        "chat_transcript": 2,
+        "consultant_call_notes": 3,
+        "formal_process_doc": 2,
+        "rambling_owner_email": 5
+      },
+      "difficulty": {
+        "contradictory": 4,
+        "standard": 6,
+        "vague": 2
+      },
+      "ood_vertical_count": 0,
+      "mean_ai_step_grounding": 0.854
+    },
+    "eval_synthetic": {
+      "n": 28,
+      "input_words": {
+        "min": 174,
+        "p25": 203,
+        "median": 234,
+        "p75": 251,
+        "max": 281,
+        "mean": 226.8,
+        "outside_80_350": 0
+      },
+      "empty_list_fields_pct": {
+        "inputs_data_required": 0.0,
+        "systems_involved": 7.1,
+        "current_process": 0.0,
+        "bottlenecks_and_risks": 0.0,
+        "recommended_improved_process": 0.0,
+        "ai_agent_steps": 0.0,
+        "human_approvals_controls": 0.0
+      },
+      "not_specified_counts": {
+        "objective": 0,
+        "trigger": 0,
+        "owner": 11
+      },
+      "avg_items_per_list_field": {
+        "inputs_data_required": 2.9,
+        "systems_involved": 2.2,
+        "current_process": 5.3,
+        "bottlenecks_and_risks": 6.4,
+        "recommended_improved_process": 6.6,
+        "ai_agent_steps": 4.0,
+        "human_approvals_controls": 4.0
+      },
+      "vertical": {
+        "accounting firm": 1,
+        "car repair garage": 5,
+        "dental/GP clinic": 1,
+        "e-commerce brand": 1,
+        "gym": 1,
+        "hair salon": 1,
+        "independent retail": 1,
+        "law firm": 5,
+        "marketing agency": 1,
+        "plumbing/trades": 1,
+        "private tutoring": 1,
+        "property management": 1,
+        "restaurant": 1,
+        "vet clinic": 6,
+        "wholesale distributor": 1
+      },
+      "process": {
+        "appointment scheduling": 2,
+        "complaint handling": 2,
+        "compliance/reporting": 3,
+        "customer onboarding": 2,
+        "customer support": 3,
+        "hiring": 2,
+        "inventory/stock": 2,
+        "invoicing/billing": 3,
+        "payroll": 2,
+        "quote generation": 3,
+        "refunds/returns": 2,
+        "supplier orders": 2
+      },
+      "style": {
+        "chat_transcript": 6,
+        "consultant_call_notes": 6,
+        "formal_process_doc": 8,
+        "rambling_owner_email": 8
+      },
+      "difficulty": {
+        "contradictory": 7,
+        "standard": 10,
+        "vague": 11
+      },
+      "ood_vertical_count": 16,
+      "mean_ai_step_grounding": 0.848
+    },
+    "eval_pet": {
+      "n": 12,
+      "input_words": {
+        "min": 148,
+        "p25": 190,
+        "median": 235,
+        "p75": 651,
+        "max": 696,
+        "mean": 331.8,
+        "outside_80_350": 4
+      },
+      "empty_list_fields_pct": {
+        "inputs_data_required": 0.0,
+        "systems_involved": 33.3,
+        "current_process": 0.0,
+        "bottlenecks_and_risks": 0.0,
+        "recommended_improved_process": 0.0,
+        "ai_agent_steps": 0.0,
+        "human_approvals_controls": 0.0
+      },
+      "not_specified_counts": {
+        "objective": 0,
+        "trigger": 0,
+        "owner": 8
+      },
+      "avg_items_per_list_field": {
+        "inputs_data_required": 4.5,
+        "systems_involved": 1.2,
+        "current_process": 7.7,
+        "bottlenecks_and_risks": 6.1,
+        "recommended_improved_process": 7.0,
+        "ai_agent_steps": 4.4,
+        "human_approvals_controls": 4.0
+      },
+      "vertical": {
+        "corporate finance": 1,
+        "corporate services": 1,
+        "court registry": 1,
+        "energy metering": 1,
+        "energy retail": 1,
+        "financial services": 1,
+        "hotel": 1,
+        "investment banking": 1,
+        "manufacturing": 1,
+        "mental health care": 1,
+        "software vendor": 1,
+        "telecommunications": 1
+      },
+      "process": {
+        "account defaulter reporting": 1,
+        "customer switch-over onboarding": 1,
+        "expense report approval": 1,
+        "incoming mail and filing": 1,
+        "meter operator registration": 1,
+        "office supply requisition": 1,
+        "patient intake": 1,
+        "room service order fulfilment": 1,
+        "sales lead to quotation": 1,
+        "securities underwriting": 1,
+        "service problem resolution": 1,
+        "supplier invoice approval": 1
+      },
+      "style": {
+        "formal_process_doc": 12
+      },
+      "difficulty": {
+        "standard": 10,
+        "vague": 2
+      },
+      "ood_vertical_count": 0,
+      "mean_ai_step_grounding": 0.85
+    }
+  },
+  "grid_design": {
+    "in_domain_verticals": 12,
+    "processes": 12,
+    "note": "12x12 grid; the (v_i, p_i) diagonal is held out of train/dev and used for eval_synthetic, so every (vertical, process) pair appears exactly once in train/dev. 3 reserved verticals are eval-only.",
+    "reserved_eval_only_verticals": [
+      "car repair garage",
+      "law firm",
+      "vet clinic"
+    ],
+    "train_dev_vertical_process_pairs": 132,
+    "eval_synthetic_vertical_process_pairs": 28
+  },
+  "pet_slice": {
+    "source": "https://huggingface.co/datasets/patriziobellan/PET",
+    "paper": "arXiv:2203.04860",
+    "license": "MIT",
+    "license_note": "MIT is permissive and allows use, modification and redistribution with attribution; suitable for building an evaluation slice. Only the raw narrative token text was used; all PET annotations (ner_tags, relations, sentence-IDs, tokens-IDs) were discarded.",
+    "documents_used": [
+      "doc-1.3",
+      "doc-1.4",
+      "doc-10.2",
+      "doc-2.1",
+      "doc-2.2",
+      "doc-3.5",
+      "doc-4.1",
+      "doc-5.3",
+      "doc-5.4",
+      "doc-6.1",
+      "doc-6.4",
+      "doc-9.1"
+    ],
+    "n_documents": 12,
+    "reference_type": "model_generated_unverified",
+    "reference_caveat": "Gold outputs for the PET slice were generated by the model under the same grounding rules and have not been verified by a human annotator."
+  },
+  "qc": {
+    "schema_validation": "pass",
+    "schema_failures": [],
+    "consistency_problems": [],
+    "near_duplicate_threshold": 0.75,
+    "near_duplicate_pairs_over_threshold": [],
+    "n_near_duplicate_pairs": 0,
+    "highest_similarity_pairs": [
+      [
+        0.4795,
+        "train_078",
+        "train_118"
+      ],
+      [
+        0.4685,
+        "train_030",
+        "train_070"
+      ],
+      [
+        0.46,
+        "train_017",
+        "train_098"
+      ],
+      [
+        0.4415,
+        "eval_pet_004",
+        "eval_pet_005"
+      ],
+      [
+        0.4219,
+        "train_028",
+        "train_119"
+      ],
+      [
+        0.4157,
+        "train_063",
+        "train_083"
+      ],
+      [
+        0.4145,
+        "train_005",
+        "train_014"
+      ],
+      [
+        0.413,
+        "train_089",
+        "eval_syn_007"
+      ],
+      [
+        0.401,
+        "train_055",
+        "train_095"
+      ],
+      [
+        0.3879,
+        "train_076",
+        "train_116"
+      ]
+    ],
+    "leakage_problems": [],
+    "leakage_checks": {
+      "train_dev_vs_eval_scenario_overlap": 0,
+      "reserved_verticals_absent_from_train_dev": true
+    }
+  }
+}

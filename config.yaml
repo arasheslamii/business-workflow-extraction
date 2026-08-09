@@ -1,0 +1,99 @@
+# Single source of truth. Every script reads this; nothing hardcodes a path,
+# a seed or a hyperparameter.
+
+seed: 20260807
+
+paths:
+  raw: data/raw                 # delivered by the data factory; NEVER written to
+  derived: data/derived         # any convenience files we compute (e.g. the
+                                # vertical_unseen_in_train axis) land here, kept
+                                # strictly separate from the raw delivery
+  results: results
+  hf_home: .hf_cache          # project-local: the only path visible from BOTH
+                              # the login node and saxa (/disk/scratch is node-local)
+
+model:
+  name: Qwen/Qwen2.5-1.5B-Instruct
+  dtype: bfloat16             # H200 MIG slice is Hopper; bf16 is native
+  load_in_4bit: false         # 1.5B bf16 weights ~3.1GB, fits 18GB with room to
+                              # spare. 4-bit adds a bitsandbytes/CUDA-13.2 risk
+                              # for no memory benefit at this scale. Flip to true
+                              # to exercise the QLoRA path.
+
+  # Measured with the real tokenizer (scripts/01_check_lengths.py), not estimated:
+  # longest train prompt+target is 1857 tok, median 1593. 2048 would in fact
+  # have been sufficient; 2560 is deliberate headroom, and encode_example()
+  # raises rather than truncating, so a future longer example fails loudly
+  # instead of losing the tail of its JSON target.
+  max_seq_len_train: 2560
+  # 2-shot arm on the 696-word PET inputs needs ~5.2k prompt + ~1.8k target.
+  max_seq_len_infer: 8192
+
+inference:
+  do_sample: false            # greedy; determinism is best-effort (kernel and
+                              # batch-size dependent), hence batch_size 1 too
+  batch_size: 1
+  max_new_tokens: 2048        # longest reference target is ~1.8k tokens (PET)
+
+fewshot:
+  n_shots: 2
+  # Exemplars are chosen deterministically from TRAIN ONLY (shortest total
+  # length, distinct verticals) and fixed across all eval items. Fixed rather
+  # than retrieved per item: keeps the arm deterministic and explainable.
+
+eval:
+  splits: [eval_synthetic, eval_pet]
+
+judge:
+  # Gemini, deliberately a DIFFERENT model family from the reference author
+  # (Claude Opus 5, per data_manifest.json). This removes direct self-preference,
+  # though not the general circularity of grading LLM-authored data with an LLM.
+  # Verify this id exists before spending quota:
+  #   python scripts/07_eval_judge.py --list-models
+  model: gemini-3.5-flash-lite
+  temperature: 0.0              # NOT sufficient for determinism: this is a
+                                # thinking model (measured ~1300-1900 thinking
+                                # tokens per rubric call) and the same prompt can
+                                # score differently across calls. The disk cache,
+                                # not temperature, is what makes results
+                                # reproducible after the fact.
+  # Must cover THINKING + answer. Measured: ~1900 thinking + ~155 answer tokens
+  # for a rubric call. At 2048 a long thinking trace overruns the budget and the
+  # JSON is cut mid-object - the truncation that broke the first judge attempt.
+  max_output_tokens: 8192
+  min_interval_s: 1.0           # request pacing; retries back off exponentially
+  cache_dir: results/judge_cache
+
+# Stage 3 placeholder - not used by Stage 2, recorded here so the eventual
+# training run is configured from the same file.
+train:
+  # LoRA rank 16 / alpha 32: alpha = 2*r is the standard scaling, and r=16 on a
+  # 1.5B model is ~18M trainable params (~1.2%) - enough capacity to learn a
+  # rigid output format from 120 examples without the full-rank overfitting risk.
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  # Attention AND MLP projections. Attention-only is the cheaper convention, but
+  # the baseline failure here is content generation (empty reasoning fields,
+  # ~1/3 the reference length), not attention routing - MLP capacity is what
+  # carries factual/content generation, so excluding it would target the wrong
+  # deficit.
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+
+  lr: 2.0e-4                    # standard LoRA LR; 10-20x higher than full FT
+                                # because only the low-rank adapters move
+  epochs: 3
+  per_device_batch_size: 1      # seq len 2560 on an 18GB slice
+  # grad_accum 4, not 8: with n=120 the binding constraint is OPTIMIZER STEPS,
+  # not batch size. 120/4 = 30 steps/epoch x 3 = 90 steps. At accum 8 we would
+  # get 45 steps total, which is too few for a cosine schedule to do anything
+  # meaningful. Effective batch 4 is noisy but 90 steps > 45 steps at this scale.
+  grad_accum: 4
+  scheduler: cosine
+  warmup_ratio: 0.03
+  gradient_checkpointing: true  # ~30% slower, but guarantees the 2560-token
+                                # sequences fit the 18GB slice with headroom
+  logging_steps: 5
+  eval_strategy: epoch          # dev loss each epoch = the overfitting signal
+  save_strategy: epoch
+  adapter_dir: results/adapter

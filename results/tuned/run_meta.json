@@ -1,0 +1,29 @@
+{
+  "arm": "tuned",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "adapter": "results/adapter",
+  "load_in_4bit": false,
+  "seed": 20260807,
+  "greedy": true,
+  "shots": [],
+  "summary": {
+    "eval_synthetic": {
+      "n": 28,
+      "strict_json_rate": 0.9642857142857143,
+      "lenient_json_rate": 0.9642857142857143,
+      "schema_valid_rate": 0.9642857142857143,
+      "mean_prompt_tokens": 684.7142857142857,
+      "mean_gen_tokens": 683.9285714285714,
+      "seconds": 667.6
+    },
+    "eval_pet": {
+      "n": 12,
+      "strict_json_rate": 1.0,
+      "lenient_json_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "mean_prompt_tokens": 782.9166666666666,
+      "mean_gen_tokens": 845.3333333333334,
+      "seconds": 358.5
+    }
+  }
+}

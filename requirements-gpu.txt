@@ -1,0 +1,22 @@
+# GPU-node dependencies. Kept separate from requirements.txt because these are
+# CUDA-build-sensitive and are the only pins likely to need adjusting on a
+# different cluster.
+#
+# The authoritative reproducibility artifact is requirements.lock.txt, written
+# by scripts/00_prep_env.sh from whatever actually resolved here. If a pin below
+# is unavailable for this cluster's CUDA, re-run prep with --flexible and commit
+# the resulting lock file.
+#
+# torch is installed separately by the prep script so the CUDA wheel index can
+# be chosen there (see TORCH_INDEX_URL).
+transformers==4.51.3
+peft==0.15.2
+accelerate==1.6.0
+datasets==3.5.0
+safetensors==0.5.3
+sentencepiece==0.2.0
+
+# Only needed if model.load_in_4bit is true in config.yaml. Left unpinned-by-
+# default and installed optionally: bitsandbytes wheels are built against
+# specific CUDA majors and this cluster reports CUDA 13.2.
+# bitsandbytes==0.45.5

@@ -1,0 +1,9 @@
+# Login-node / CPU dependencies (data QC, evaluation aggregation, judging).
+# Pure Python, no CUDA involvement.
+PyYAML==6.0.2
+numpy==2.1.3
+pytest==8.3.4
+
+# Frontier-LLM client for data generation and LLM-as-judge (Stage 4).
+google-genai==1.16.1
+tenacity==9.0.0

@@ -1,0 +1,33 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "load_in_4bit": false,
+  "seed": 20260807,
+  "n_train": 120,
+  "n_dev": 12,
+  "optimizer_steps": 90,
+  "config": {
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "lr": 0.0002,
+    "epochs": 3,
+    "per_device_batch_size": 1,
+    "grad_accum": 4,
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "gradient_checkpointing": true,
+    "logging_steps": 5,
+    "eval_strategy": "epoch",
+    "save_strategy": "epoch",
+    "adapter_dir": "results/adapter"
+  }
+}

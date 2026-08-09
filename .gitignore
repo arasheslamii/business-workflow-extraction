@@ -1,0 +1,24 @@
+# Environments and caches - large, machine-specific, regenerable by prep
+.venv/
+.hf_cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Judge response cache. Regenerable, but deleting it forces a fresh BILLABLE
+# judge run - keep it locally, just do not commit ~300 response files.
+results/judge_cache/
+
+# Model weights: 74MB adapter + an equal-sized best-checkpoint copy.
+# Too large for git; reproduce with scripts/04_train.py.
+results/adapter/*.safetensors
+results/adapter/checkpoint-*/
+results/slurm-*.out
+
+# Everything else under results/ IS a deliverable and is intentionally tracked:
+#   report.md, failures.md, metrics_*.json, run_meta.json, train_log.json,
+#   and the raw per-arm generations in base_*/ and tuned/.
+
+# Never commit credentials.
+.env
+*.key

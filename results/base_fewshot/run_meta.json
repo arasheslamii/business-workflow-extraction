@@ -1,0 +1,32 @@
+{
+  "arm": "fewshot",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "adapter": null,
+  "load_in_4bit": false,
+  "seed": 20260807,
+  "greedy": true,
+  "shots": [
+    "train_077",
+    "train_089"
+  ],
+  "summary": {
+    "eval_synthetic": {
+      "n": 28,
+      "strict_json_rate": 0.0,
+      "lenient_json_rate": 1.0,
+      "schema_valid_rate": 0.75,
+      "mean_prompt_tokens": 3436.714285714286,
+      "mean_gen_tokens": 579.8214285714286,
+      "seconds": 318.3
+    },
+    "eval_pet": {
+      "n": 12,
+      "strict_json_rate": 0.0,
+      "lenient_json_rate": 1.0,
+      "schema_valid_rate": 0.9166666666666666,
+      "mean_prompt_tokens": 3534.9166666666665,
+      "mean_gen_tokens": 659.5,
+      "seconds": 163.5
+    }
+  }
+}

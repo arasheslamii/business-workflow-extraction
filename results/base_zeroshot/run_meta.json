@@ -1,0 +1,29 @@
+{
+  "arm": "zeroshot",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "adapter": null,
+  "load_in_4bit": false,
+  "seed": 20260807,
+  "greedy": true,
+  "shots": [],
+  "summary": {
+    "eval_synthetic": {
+      "n": 28,
+      "strict_json_rate": 0.0,
+      "lenient_json_rate": 1.0,
+      "schema_valid_rate": 0.6428571428571429,
+      "mean_prompt_tokens": 684.7142857142857,
+      "mean_gen_tokens": 386.5,
+      "seconds": 186.8
+    },
+    "eval_pet": {
+      "n": 12,
+      "strict_json_rate": 0.0,
+      "lenient_json_rate": 1.0,
+      "schema_valid_rate": 0.8333333333333334,
+      "mean_prompt_tokens": 782.9166666666666,
+      "mean_gen_tokens": 466.5833333333333,
+      "seconds": 108.3
+    }
+  }
+}
